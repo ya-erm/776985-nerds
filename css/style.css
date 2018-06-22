@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto.woff') format('woff'),
+         url('fonts/roboto.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/*
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/robotobold.woff') format('woff'),
+         url('fonts/robotobold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/robotomedium.woff') format('woff'),
+         url('fonts/robotomedium.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+.button {   
+    font-weight: bold; 
+    text-decoration-line: none;
+    text-transform: uppercase; 
+    background: #fb565a;
+    color: white;
+    border-radius: 5px;
+    padding: 10px; /*временно*/
+}
+
+body {
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.slider {
+    background-color: #eee;
+}
+
+.features > h2 {
+    font-size: 55px;
+}
+
+.offer-list > li > h3 {
+    font-size: 24px;
+    text-transform: uppercase; 
+}
+
+.uppercase {
+    text-transform: uppercase; 
+}
+
+.about-us-slogan, .table-statistic > tbody {
+    font-weight: bold; 
+    font-size: 32px;
+}
+
+.map {
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+}
+
+.address {
+    display: inline-block;
+    background: white;
+    font-size: 18px;
+}
+
+.social-slogan {
+    font-size: 36px;
+}
