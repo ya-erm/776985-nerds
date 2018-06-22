@@ -35,12 +35,13 @@
 
 .button {   
     font-weight: bold; 
-    text-decoration-line: none;
     text-transform: uppercase; 
     background: #fb565a;
     color: white;
     border-radius: 5px;
-    padding: 10px; /*временно*/
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px; /*временно*/ 
 }
 
 body {
@@ -48,6 +49,31 @@ body {
     font-size: 16px;
 }
 
+a {
+    text-decoration-line: none;
+}
+
+.uppercase {
+    text-transform: uppercase; 
+}
+
+.site-navigation > li > a {
+    font-weight: bold; 
+    font-size: 16px;
+    color: black;
+}
+.site-navigation :hover {
+    color: #fb565a;
+}
+.site-navigation > .selected {
+    text-decoration-line: underline;
+    /* TODO: цвет: #fb565a, толщина линии: 2px */
+}
+/*
+click {
+    opacity: 0.3;
+}
+*/
 .slider {
     background-color: #eee;
 }
@@ -61,13 +87,17 @@ body {
     text-transform: uppercase; 
 }
 
-.uppercase {
-    text-transform: uppercase; 
-}
-
 .about-us-slogan, .table-statistic > tbody {
     font-weight: bold; 
     font-size: 32px;
+}
+
+.partners-item  {
+    opacity: 0.2;
+}
+/* TODO: не работает */
+.partners-item :hover {
+    opacity: 1.0;
 }
 
 .map {
