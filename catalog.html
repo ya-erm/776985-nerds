@@ -14,7 +14,7 @@
 				<ul class="site-navigation">
 					<li><a href="info.html">Студия</a></li>
 					<li><a href="clients.html">Клиенты</a></li>
-					<li><a href="catalog.html">Магазин</a></li>
+					<li class="selected"><a href="catalog.html">Магазин</a></li>
 					<li><a href="contacts.html">Контакты</a></li>
 				</ul>
 				<a class="cart" href="cart.html">Корзина</a>
@@ -29,20 +29,90 @@
 			<div>
 				<section class="filtration">
 					<h2 class="visually-hidden">Фильтр товаров</h2>
-					<!-- Здесь будет форма -->
+					<form action="/getProjects" method="post" oninput="rangeMinOut.value=rangeMin.value; rangeMaxOut.value=rangeMax.value;">
+						<label class="cost">Стоимость:
+							<input name="rangeMin" value="0" min="0" max="20000" step="200" type="range">
+							<input name="rangeMax" value="15000" min="0" max="20000" step="200" type="range">
+							<label>От
+								<output name="rangeMinOut">0</output>
+							</label>
+							<label>До
+								<output name="rangeMaxOut">15000</output>
+							</label>
+						</label>
+						<fieldset class="grid">
+						  <legend>Сетка:</legend>
+						  <ul>
+							<li>
+								<input type="radio" name="grid-type" value="adaptive" id="filter-grid-adaptive" checked>
+								<label for="filter-grid-adaptive">
+									Адаптивная
+								</label>
+							</li>
+							<li>
+								<input type="radio" name="grid-type" value="fixed" id="filter-grid-fixed">
+								<label for="filter-grid-fixed">
+									Фиксировання
+								</label>
+							</li>
+							<li>
+								<input type="radio" name="grid-type" value="flexed" id="filter-grid-flexed">
+								<label for="filter-grid-flexed">
+									Резиновая
+								</label>
+							</li>
+						  </ul>
+						</fieldset>
+						<fieldset class="features">
+						  <legend>Особенности:</legend>
+						  <ul>
+							<li>
+								<input type="checkbox" name="slider" id="filter-features-slider" checked>
+								<label for="filter-features-slider">
+									Слайдер
+								</label>
+							</li>
+							<li>
+								<input type="checkbox" name="advantages" id="filter-features-advantages">
+								<label for="filter-features-advantages">
+									Блок преимуществ
+								</label>
+							</li>
+							<li>
+								<input type="checkbox" name="news" id="filter-features-news" checked>
+								<label for="filter-features-news">
+									Новости
+								</label>
+							</li>
+							<li>
+								<input type="checkbox" name="gallery" id="filter-features-gallery">
+								<label for="filter-features-gallery">
+									Галерея
+								</label>
+							</li>
+							<li>
+								<input type="checkbox" name="cart" id="filter-features-cart">
+								<label for="filter-features-cart">
+									Корзина
+								</label>
+							</li>
+						  </ul>
+						</fieldset>
+						<button type="submit">Показать</button>
+					</form>
 				</section>
 				<section class="sorting">
 					<h2 class="visually-hidden">Сортировка товаров</h2>
 					<p>Сортировать:</p>
 					<div class="sort-buttons">
 						<ul class="sort-button-list">
-							<li><input type="button" value="По цене"></li>
-							<li><input type="button" value="По цене"></li>
-							<li><input type="button" value="По цене"></li>
+							<li><button name="by-price">По цене</button></li>
+							<li><button name="by-type">По типу</button></li>
+							<li><button name="by-name">По названию</button></li>
 						</ul>
 						<div class="order-buttons">
-							<input type="button" class="desc-button" value="">
-							<input type="button" class="asc-button" value="">
+							<button class="asc-button">По возрастанию</button>
+							<button class="desc-button">По убыванию</button>
 						</div>
 					</div>
 				</section>
@@ -116,6 +186,7 @@
 		
 		<footer class="main-footer">
 			<section class="map">
+				<h2 class="visually-hidden">Контакты</h2>
 				<div class="address">
 					<b>Nerds Design Studio</b>
 					<p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -137,5 +208,25 @@
 				</div>
 			</section>
 		</footer>
+
+		<section class="modal write-us">
+			<h2 class="visually-hidden">Напишите нам</h2>
+			<form action="/sendLetter" method="post">
+				<button type="button" class="close">X</button>
+				<p>
+					<label for="user-name">Ваше имя:</label>
+					<input id="user-name" type="text" name="user name" placeholder="Имя Фамилия">
+				</p>
+				<p>
+					<label for="user-email">Ваш e-mail:</label>
+					<input id="user-email" type="email" name="user email" placeholder="email@example.com">
+				</p>
+				<p>
+					<label for="message-text">Текст письма:</label>
+					<textarea id="message-text" type="text" name="message text" placeholder="В свободной форма"></textarea>
+				</p>
+				<button>Отправить</button>
+			</form>
+		</section>
 	</body>
 </html>
