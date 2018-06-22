@@ -1,0 +1,56 @@
+.visually-hidden {
+    color: lightgray; /* временно */
+}
+
+.button {   
+    font-weight: 500; 
+    text-decoration-line: none;
+    text-transform: uppercase; 
+    background: #fb565a;
+    color: white;
+    border-radius: 5px;
+    padding: 10px; /*временно*/
+    margin: 10px; /*временно*/
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.features > h2 {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.features > p, .features > a {
+    font-size: 18px;
+}
+
+.offer-list > li > h3 {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase; 
+}
+
+.about-us-left-block {
+    font-size: 16px;
+}
+
+.slogan {
+    font-size: 32px;
+}
+
+.uppercase {
+    text-transform: uppercase; 
+}
+
+.table-statistic > tbody {
+    font-size: 32px;
+}
+.table-statistic > tfoot {
+    font-size: 16px;
+}
+
+.address {
+    font-size: 20px;
+}
