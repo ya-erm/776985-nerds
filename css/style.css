@@ -39,12 +39,21 @@
     background: #fb565a;
     color: white;
     border-radius: 5px;
-    vertical-align: middle;
-    text-align: center;
-    padding: 10px; /*временно*/ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.button-green {
+    background: #00ca74;
+}
+.button-yellow {
+    background: #efc849;
 }
 
-body {
+body {   
+    margin: 0;
+    padding: 0; 
     font-family: 'Roboto';
     font-size: 16px;
 }
@@ -57,12 +66,51 @@ a {
     text-transform: uppercase; 
 }
 
-.site-navigation > li > a {
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 1200px;
+
+    background: #ff000030; /*временно для сетки*/
+}
+
+.main-header {
+    background-color: #eeeeee50; /*убрать прозрачность*/
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+.main-header-logo {
+    padding-top: 50px;
+    padding-left: 10px;
+    width: 200px;
+
+    background: #0000ff30; /*временно для сетки*/
+}
+.site-navigation {
+    margin: 0;
+    padding: 0; 
+    width: 800px;
+    padding-top: 80px; 
+    display: flex;    
+    justify-content: center;
+    list-style: none;
+
+    background: #00ff0030; /*временно для сетки*/
+}
+.site-navigation > li  {
+    margin: 0px 40px 5px 5px;
+}
+.site-navigation > li > a, 
+.cart > a {
     font-weight: bold; 
     font-size: 16px;
     color: black;
 }
-.site-navigation :hover {
+.site-navigation :hover,
+.cart :hover {
     color: #fb565a;
 }
 .site-navigation > .selected {
@@ -74,45 +122,266 @@ click {
     opacity: 0.3;
 }
 */
+
+.main-navigation > .cart {
+    width: 200px;
+    padding-top: 80px;
+    text-align: left;
+    background: #0000ff55; /*временно для сетки*/
+}
+.main-navigation > .cart > img {
+    margin-left: 55px; 
+    margin-right: 20px; 
+}
+
 .slider {
-    background-color: #eee;
+    position: relative;
+}
+
+.slider > .slide  {
+    display: flex;
+}
+
+.slider > .slide > img {
+    width: 760px;
+    height: 430px;
+    padding-right: 33px; 
+    margin-top:-5px; /*TODO: исправить*/ 
+
+    background: #0000ff55; /*временно для сетки*/
+}
+
+.slider-navigation {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    bottom: 10px;
+    width: 100px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.slide-second, /*TODO: исправить*/
+.slide-third {
+    visibility: hidden;
+    height: 0;
 }
 
 .features > h2 {
     font-size: 55px;
+    line-height: 55px;
+    margin: 73px 10px 0 10px;
+}
+.features > p {
+    margin: 27px 10px 0 10px;
+    line-height: 24px;
+}
+
+.button-more {
+    width: 220px;
+    height: 30px;
+    margin: 39px 10px 0 10px;
+}
+
+.offer-list {
+    margin: 0;
+    margin-top: 1px;
+    padding: 0 10px;
+    height: 500px;
+    list-style: none;
+    display: flex;
+}
+.offer-list > li {
+    margin: 80px 100px 0 0;
+    width: 300px;
 }
 
 .offer-list > li > h3 {
+    margin: 0;
+    margin-top: 24px;
     font-size: 24px;
+    line-height: 24px;
     text-transform: uppercase; 
 }
 
-.about-us-slogan, .table-statistic > tbody {
+.offer-list > li > p {
+    margin: 0;
+    margin-top: 20px;
+    line-height: 24px;
+    /*TODO: буквы шире!*/
+}
+
+.offer-list > li > a {
+    display: flex;
+    margin: 0;
+    margin-top: 30px;
+    height: 30px;
+    width: 140px;
+}
+
+.about-us {
+    display: flex;
+    height: 510px;
+}
+
+.about-us-slogan > b, 
+.statistic > li > .percentages {
+    margin: 0;
     font-weight: bold; 
-    font-size: 32px;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.about-us-left-block {
+    width: 780px;
+    
+    background: #00ff0055; /*временно для сетки*/
+}
+
+.about-us-left-block > p {
+    margin: 35px 10px 0 10px;
+    line-height: 22px;
+}
+
+.about-us-left-block > .about-us-slogan { 
+    margin: 65px 10px 0 10px;   
+}
+
+.about-us-left-block > .services-header { 
+    margin: 42px 10px 0 10px;
+}
+
+.about-us-left-block > .services-list {
+    list-style: "-"; /*TODO*/
+}
+.about-us-left-block > .services-list > li {
+    margin: 10px;
+    padding: 10px 0;
+}
+
+.about-us-right-block {
+    width: 380px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 20px;
+
+    background: #0000ff55; /*временно для сетки*/
+}
+
+.about-us-right-block > p {
+    margin-top: 33px;
+}
+
+.statistic {
+    margin: 0;
+    margin-top: 33px;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+.statistic > li > p {
+    text-align: left;
+    margin: 20px 10px 0 10px;
+}
+.statistic > li > p.percentages {
+    margin-left: 12px; 
+}
+.statistic > li > p.percentages > sup {
+    font-size: 28px;
+}
+
+.partners {
+    height: 173px;
+}
+.partners-list {
+    margin: 0;
+    margin-top: -10px; 
+    padding: 0 10px;
+    padding-right: 28px; 
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
 }
 
 .partners-item  {
     opacity: 0.2;
 }
-/* TODO: не работает */
-.partners-item :hover {
-    opacity: 1.0;
+
+.partners-item :hover { /* TODO: не работает */
+    opacity: 1.0; 
+}
+
+.main-footer {
+    padding: 70px 0;
 }
 
 .map {
+    background-color: #e9e5dc50; /*TODO: прозрачность*/ 
     background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
-    height: 300px;
+    background-position-x: 50%;
+    height: 420px;
     width: 100%;
 }
-
+.address-wrapper {
+    position: absolute;
+    background: #ffffff;
+    width: 320px;
+    margin: 55px 10px 10px 10px;
+    padding-bottom: 55px;
+}
 .address {
-    display: inline-block;
-    background: white;
+    width: 220px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.address-header {
     font-size: 18px;
+    margin-bottom: 26px;
+}
+.address > p {
+    margin-top: 18px;
+}
+.button-write-us {
+    margin-top: 36px;
+    height: 30px;
+}
+
+.social {
+    padding-top: 65px; 
+    display: flex;
+
+}
+
+.social-list {
+    margin: 0;
+    padding: 0;
+    width: 380px;
+    display: flex;
+    list-style: none;
+}
+
+.social-list > li {
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    background: #00ca7430; /*временно для сетки*/
+}
+
+.social-right-block {
+    padding-left: 30px;
 }
 
 .social-slogan {
+    padding-top: 5px;
     font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0.3px;
+}
+.social-right-block > p {
+    margin: 0;
+    margin-bottom: 10px;
 }

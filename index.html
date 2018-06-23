@@ -8,10 +8,15 @@
 	</head>
 	
 	<body>
+		<!--скриншот страницы-->
+		<div style="z-index: -1; text-align: center; position: absolute; width: 99%; opacity: 0.5;">
+			<img src="D:/HTML Academy/_Макет/preview/nerds-index.jpg"  style=" margin:0 auto;"/>
+		</div>
+		
 		<header class="main-header">
-			<nav class="main-navigation">
+			<nav class="main-navigation container">
 				<a class="main-header-logo" href="index.html">
-					<img src="img/nerds-logo.svg" width="150" height="100" alt="Логотип дизайн-студии «Nerds»">
+					<img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Nerds»">
 				</a>
 				<ul class="site-navigation uppercase">
 					<li><a href="info.html">Студия</a></li>
@@ -19,43 +24,48 @@
 					<li><a href="catalog.html">Магазин</a></li>
 					<li><a href="contacts.html">Контакты</a></li>
 				</ul>
-				<a class="cart" href="cart.html">Корзина</a>
+				<div class="cart">
+					<img width="15" height="15" src="img/cart-icon.svg">
+					<a class="uppercase" href="cart.html">Корзина</a>
+				</div>
 			</nav>
 		<h1 class="visually-hidden">Дизайн-студия «Nerds»</h1>
-		<section class="index-header">
+		<section class="index-header container">
 			<div class="slider">
-				<input type="radio" name="slide1" id="slide1" checked="checked">
 				<div class="slide slide-first">
-					<img src="img/nerds-index-slide1.png" height="400" alt="слайд_1">
 					<div class="features">
-						<h2>Долго, дорого, скурпулезно.</h2>
-						<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-						<a class="button" href="details.html">Узнать больше</a>
+						<h2>Долго, дорого, скрупулезно.</h2>
+						<p>Математически выверенный дизайн <br>для вашего сайта или мобильного приложения.</p>
+						<a class="button button-more" href="details.html">Узнать больше</a>
 					</div>
+					<img src="img/nerds-index-slide1.png" height="430" alt="слайд_1">
 				</div>
-				<input type="radio" name="slide2" id="slide2">
 				<div class="slide slide-second">
-					<img src="img/nerds-index-slide2.png" height="400" alt="слайд_2">
 					<div class="features">
 						<h2>Любим математику как никто другой</h2>
 						<p>Никакого креатива, только математические формулы для расчёта идеальных пропорций.</p>
-						<a class="button" href="details.html">Узнать больше</a>
+						<a class="button button-more" href="details.html">Узнать больше</a>
 					</div>
+					<img src="img/nerds-index-slide2.png" height="430" alt="слайд_2">
 				</div>
-				<input type="radio" name="slide3" id="slide3">
 				<div class="slide slide-third">
-					<img src="img/nerds-index-slide3.png" height="400" alt="слайд_3">
 					<div class="features">
 						<h2>Только ночь, только хардкор</h2>
 						<p>Работать днём как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-						<a class="button" href="details.html">Узнать больше</a>
+						<a class="button button-more" href="details.html">Узнать больше</a>
 					</div>
+					<img src="img/nerds-index-slide3.png" height="430" alt="слайд_3">
+				</div>
+				<div class="slider-navigation">
+					<input type="radio" name="slide1" id="slide1" checked="checked">
+					<input type="radio" name="slide2" id="slide2">
+					<input type="radio" name="slide3" id="slide3">
 				</div>
 			</div>
 		</section>
 		</header>
 		
-		<main class="main-page">
+		<main class="main-page container">
 			
 			<section class="offers">
 				<h2 class="visually-hidden">Наши услуги:</h2>
@@ -63,58 +73,56 @@
 					<li>
 						<img src="img/index-offers-1.jpg" alt="Веб-сайт от дизайн-студии «Nerds»">
 						<h3>Веб-сайты</h3>
-						<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+						<p>Мир никогда не будет прежним <br>после того как увидит ваш сайт!</p>
 						<a class="button" href "#">Заказать</a>
 					</li>
 					<li>
 						<img src="img/index-offers-2.jpg" alt="Мобильное приложение от дизайн-студии «Nerds»">
 						<h3>Приложения</h3>
 						<p>Покорите топ-10 приложений в AppStore и Google Play</p>
-						<a class="button" href "#">Заказать</a>
+						<a class="button button-green" href "#">Заказать</a>
 					</li>
 					<li>
 						<img src="img/index-offers-3.jpg" alt="Презентации от дизайн-студии «Nerds»">
 						<h3>Презентации</h3>
-						<p>Вы даже не подозреваете, насколько вы изумительны!</p>
-						<a class="button" href "#">Заказать</a>
+						<p>Вы даже не подозреваете, <br>насколько вы изумительны!</p>
+						<a class="button button-yellow" href "#">Заказать</a>
 					</li>
 				</ul>
 			</section>
-			
+			<hr>
 			<section class="about-us">
 				<h2 class="visually-hidden">О нас:</h2>
 				<div class="about-us-left-block">
-					<p class="about-us-slogan"><b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b></p>
-					<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-					<p class="uppercase"><strong>Выполняем заказы на разработку:</strong></p>
+					<p class="about-us-slogan"><b>Мы — маленькая, но гордая<br>дизайн-студия из Краснодара.</b></p>
+					<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет <br>превыше креатива. Работаем не покладая рук, как роботы.</p>
+					<p class="services-header uppercase"><strong>Выполняем заказы на разработку:</strong></p>
 					<ul class="services-list">
-						<li><p>Веб-сайтов любой сложности</p></li>
-						<li><p>Мобильных приложений для iOS и Android</p></li>
-						<li><p>Слайдшоу и видео для корпоративных презентаций</p></li>
+						<li>Веб-сайтов любой сложности</li>
+						<li>Мобильных приложений для iOS и Android</li>
+						<li>Слайдшоу и видео для корпоративных презентаций</li>
 					</ul>
 				</div>
 				<div class="about-us-right-block">
-					<img src="img/nerds-illustration.jpg" width="360" height="200" alt="Логотип дизайн-студии «Nerds»">
+					<img src="img/nerds-illustration.jpg" width="360" height="210" alt="Логотип дизайн-студии «Nerds»">
+					<p class="uppercase">C 2004 года любим точность во всем:</p>
+					<ul class="statistic">
+						<li>
+							<p class="percentages">146<sup>%</sup></p>
+							<p>Уровень самоотдачи</p>
+						</li>
+						<li>
+							<p class="percentages">100<sup>%</sup></p>
+							<p>Соблюдение сроков</p>
+						</li>
+						<li>
+							<p class="percentages">50<sup>%</sup></p>
+							<p>Минимальная предоплата</p>
+						</li>
+					</ul>
 				</div>
-				<p>C 2004 года любим точность во всем:</p>
-				<table class="table-statistic">
-					<tbody>
-						<tr>
-							<td>146<sup>%</sup></td>
-							<td>100<sup>%</sup></td>
-							<td>50<sup>%</sup></td>
-						</tr>
-					</tbody>
-					<tfoot>
-						<tr>
-							<td>Уровень самоотдачи</td>
-							<td>Соблюдение сроков</td>
-							<td>Минимальная предоплата</td>
-						</tr>
-					</tfoot>
-				</table>
 			</section>
-			
+			<hr>
 			<section class="partners">
 				<h2 class="visually-hidden">Наши партнеры:</h2>
 				<ul class="partners-list">
@@ -132,19 +140,25 @@
 					</li>
 				</ul>
 			</section>
+			<hr>
 		</main>
-		
 		<footer class="main-footer">
 			<section class="map">
 				<h2 class="visually-hidden">Контакты</h2>
-				<div class="address">
-					<b class="uppercase">Nёrds Design Studio</b>
-					<p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-					<p>тел. <a href="tel:+78122757575">+7(812)275-75-75</a></p>
-					<a class="button" href="#">Напишите нам</a>
+				<div class="container">
+					<div class="address-wrapper">
+						<div class="address">
+							<h3 class="address-header">
+								<b class="uppercase">Nёrds Design Studio</b>
+							</h3>
+							<p>191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
+							<p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+							<a class="button button-write-us" href="#">Напишите нам</a>
+						</div>
+					</div>
 				</div>
 			</section>
-			<section class="social">
+			<section class="social container">
 				<ul class="social-list">
 					<li class="social-item"><a class="social-button" href="#">Вконтакте</a></li>
 					<li class="social-item"><a class="social-button" href="#">Facebook</a></li>
