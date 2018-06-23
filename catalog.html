@@ -29,7 +29,7 @@
 			<div>
 				<section class="filtration">
 					<h2 class="visually-hidden">Фильтр товаров</h2>
-					<form action="/getProjects" method="post" oninput="rangeMinOut.value=rangeMin.value; rangeMaxOut.value=rangeMax.value;">
+					<form action="https://echo.htmlacademy.ru" method="post" oninput="rangeMinOut.value=rangeMin.value; rangeMaxOut.value=rangeMax.value;">
 						<label class="cost">Стоимость:
 							<input name="rangeMin" value="0" min="0" max="20000" step="200" type="range">
 							<input name="rangeMax" value="15000" min="0" max="20000" step="200" type="range">
@@ -190,7 +190,7 @@
 				<div class="address">
 					<b>Nerds Design Studio</b>
 					<p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-					<p>тел. +7(812)275-75-75</p>
+					<p>тел. <a href="tel:+78122757575">+7(812)275-75-75</a></p>
 					<a class="button" href="#">Напишите нам</a>
 				</div>
 				<img src="img/map.jpg" width="100%" height="300" alt="Карта месторасположения офиса">
@@ -211,7 +211,7 @@
 
 		<section class="modal write-us">
 			<h2 class="visually-hidden">Напишите нам</h2>
-			<form action="/sendLetter" method="post">
+			<form action="https://echo.htmlacademy.ru" method="post">
 				<button type="button" class="close">X</button>
 				<p>
 					<label for="user-name">Ваше имя:</label>
