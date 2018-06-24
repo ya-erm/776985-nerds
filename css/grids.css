@@ -1,0 +1,55 @@
+.screenshot-preview {
+    display: block !important;
+    z-index: -1; 
+    text-align: center; 
+    position: absolute;
+    width: 99%; 
+    opacity: 0.5;
+}
+.screenshot-preview img {
+    margin:0 auto;
+}
+
+.container {
+    background: #ff000010; /*временно для сетки*/
+}
+.main-header {
+    background-color: #eeeeee50; /*убрать прозрачность*/
+}
+
+.site-navigation {
+    background: #00ff0030; /*временно для сетки*/
+}
+
+.main-header-logo {
+    background: #0000ff30; /*временно для сетки*/
+}
+
+.main-navigation > .cart {
+    background: #0000ff30; /*временно для сетки*/
+}
+
+.slider > .slide > img {
+    background: #0000ff30; /*временно для сетки*/
+}
+
+.features > h2, 
+.features > p  {
+    background: #0000ff30; /*временно для сетки*/    
+}
+
+.offer-list > li {
+    background: #0000ff30; /*временно для сетки*/
+}
+
+.about-us-left-block {
+    background: #00ff0055; /*временно для сетки*/
+}
+
+.about-us-right-block {
+    background: #0000ff30; /*временно для сетки*/
+}
+
+.map {
+    background-color: #e9e5dc50; /*TODO: убрать прозрачность*/ 
+}
