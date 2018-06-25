@@ -1,3 +1,9 @@
+/*
+* {
+    outline: 1px dashed red;
+}
+*/
+
 @font-face {
     font-family: 'Roboto';
     src:
@@ -29,10 +35,6 @@
     font-style: normal;
 }
 */
-* {
-    outline: 1px dashed red;
-}
-
 
 .visually-hidden {
     position: absolute;
@@ -115,14 +117,15 @@ a {
 }
 
 .main-navigation {
+    height: 115px;
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
 .main-header-logo {
-    padding-top: 50px;
-    padding-left: 10px;
-    width: 200px;
+    line-height: 0;
+    margin: 0 10px 0;
 }
 a.main-header-logo {
     opacity: 1.0;
@@ -138,30 +141,31 @@ a.main-header-logo:active {
     margin: 0;
     padding: 0; 
     width: 800px;
-    margin-top: 64px; 
     display: flex;    
     justify-content: center;
+    margin-bottom: 15px; 
 }
 .site-navigation ul {
     display: flex;
-    list-style: none;
+    margin: 0 auto;
+    margin-left: 110px;
+    list-style: none;    
 }
-.site-navigation  li  {
-    margin: 0px 40px 5px 5px;
+.site-navigation li {
+    margin: 0 40px 0 5px;
 }
 .navigation-item {
     text-transform: uppercase; 
     font-weight: bold; 
     font-size: 16px;
+    line-height: 20px;
     color: black;
     opacity: 1.0;
 }
-.site-navigation :hover,
-.cart :hover {
+.navigation-item:hover {
     color: #fb565a;
 }
-.site-navigation :active,
-.cart :active {
+.navigation-item:active {
     color: black;
     opacity: 0.3;
 }
@@ -179,10 +183,11 @@ a.main-header-logo:active {
 }
 .cart-item {
     display: flex;    
-    margin-top: 64px; 
     align-items: center;
     background: url("../img/icon-cart.svg") left no-repeat;
-    padding-left: 30px;
+    padding-left: 40px;
+    margin-bottom: 15px; 
+    margin-right: 30px;
 }
 
 
@@ -209,7 +214,6 @@ a.main-header-logo:active {
     width: 760px;
     height: 430px;
     padding-right: 33px; 
-    margin-top:-5px;
 }
 
 .slider-navigation {
@@ -217,7 +221,7 @@ a.main-header-logo:active {
     left: 0; 
     right: 0; 
     bottom: 10px;
-    width: 100px;  
+    width: 75px;  
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -266,6 +270,9 @@ a.main-header-logo:active {
     height: 0;
 }
 
+.features {
+    padding-top: 4px;
+}
 .features > h2 {
     font-size: 55px;
     line-height: 55px;
@@ -290,12 +297,12 @@ a.main-header-logo:active {
     list-style: none;
     display: flex;
 }
-.offer-list > li {
-    margin: 80px 100px 0 0;
+.offer-list li {
+    margin: 79px 100px 0 0;
     width: 300px;
 }
 
-.offer-list > li > h3 {
+.offer-list h3 {
     margin: 0;
     margin-top: 24px;
     font-size: 24px;     
@@ -304,17 +311,17 @@ a.main-header-logo:active {
     text-transform: uppercase; 
 }
 
-.offer-list > li > p {
+.offer-list p {
     margin: 0;
     margin-top: 20px;
     line-height: 24px;
     /*TODO: буквы шире!*/
 }
 
-.offer-list > li > a {
+.offer-list a {
     display: flex;
     margin: 0;
-    margin-top: 30px;
+    margin-top: 31px;
     height: 50px;
     width: 160px;
 }
@@ -336,8 +343,8 @@ a.main-header-logo:active {
 }
 
 .about-us-left-block > p {
-    margin: 35px 10px 0 10px;
-    line-height: 22px;
+    margin: 33px 10px 0 10px;
+    line-height: 23px;
 }
 
 .about-us-left-block > .about-us-slogan { 
@@ -345,7 +352,7 @@ a.main-header-logo:active {
 }
 
 .about-us-left-block > .services-header { 
-    margin: 42px 10px 0;
+    margin: 40px 10px 0;
     font-weight: 900;
 }
 
@@ -374,7 +381,7 @@ a.main-header-logo:active {
 
 .statistic {
     margin: 0;
-    margin-top: 45px;
+    margin-top: 44px;
     padding: 0;
     display: flex;
     list-style: none;
@@ -385,8 +392,7 @@ a.main-header-logo:active {
     margin: 20px 10px 0 10px;
 }
 .statistic > li > p.percentages {
-    margin: 0;
-    margin-left: 12px; 
+    margin: 0 11px; 
     font-size: 45px;
     line-height: 45px;
     font-weight: 900; 
@@ -436,6 +442,11 @@ a.main-header-logo:active {
     top: 85px;
 }
 
+.contacts {
+    height: 100%;
+    position: relative;
+}
+
 .address-wrapper {
     position: absolute;
     background: #ffffff;
@@ -456,15 +467,16 @@ a.main-header-logo:active {
     margin-bottom: 26px;
 }
 
-.address > p {
+.address p {
     margin-top: 18px;
     color: #666666
 }
 
-.address > p > a {
+.address a {
+    line-height: 19px;
     color: #666666
 }
-.address > p > a:hover {
+.address a:hover {
     color: #fb565a
 }
 
@@ -489,6 +501,7 @@ a.main-header-logo:active {
 
 .social-list > li {
     margin-left: 10px;
+    line-height: 0;
 }
 
 .social-item {
@@ -518,16 +531,17 @@ a.main-header-logo:active {
 }
 
 .social-slogan {
-    padding-top: 5px;
+    margin: 0;
+    padding: 6px 0 0;
     font-size: 36px;
     font-weight: 900;
     line-height: 36px;
     letter-spacing: 0.3px;
 }
 
-.social-right-block > p {
-    margin: 0;
-    margin-bottom: 13px;
+.social-description {
+    margin: 12px 0 0;
+    padding: 0;
 }
 
 .modal {
