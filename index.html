@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<!--Подсветка сетки:-->
-		<link rel="stylesheet" type="text/css" href="css/grids.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="css/grids.css"/> -->
 	</head>
 	
 	<body>
@@ -61,19 +61,13 @@
 				</div>
 				<ul class="slider-navigation">
 					<li class="slide-radio">
-						<button class="slide-btn">
-							Первый слайд
-						</button>
+						<button class="button button-slide selected" title="Первый слайд"/>
 					</li>
 					<li class="slide-radio">
-						<button class="slide-btn">
-							Второй слайд
-						</button>
+						<button class="button button-slide" title="Второй слайд"/>
 					</li>
 					<li class="slide-radio">
-						<button class="slide-btn">
-							Третий слайд
-						</button>
+						<button class="button button-slide" title="Третий слайд"/>
 					</li>
 				</ul>
 			</div>
@@ -168,7 +162,7 @@
 							</h3>
 							<p>191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
 							<p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-							<a class="button button-write-us" href="#">Напишите нам</a>
+							<button type="button" class="button button-write-us" href="#">Напишите нам</button>
 						</div>
 					</div>
 					<img class="map-marker" src="img/map-marker.png" width="367" height="190">
@@ -177,9 +171,21 @@
 			<section class="social container">
 				<h2 class="visually-hidden">Мы в социальных сетях:</h2>
 				<ul class="social-list">
-					<li><a class="social-item social-item-vk" href="#" title="Вконтакте"></a></li>
-					<li><a class="social-item social-item-facebook" href="#" title="Facebook"></a></li>
-					<li><a class="social-item social-item-instagram" href="#" title="Instagram"></a></li>
+					<li>
+						<a class="social-item" href="#" title="Вконтакте">
+							<img src="img/icon-social-vk.svg" width="25" height="25">
+						</a>
+					</li>
+					<li>
+						<a class="social-item" href="#" title="Facebook">
+							<img src="img/icon-social-fb.svg" width="25" height="25">
+						</a>
+					</li>
+					<li>
+						<a class="social-item" href="#" title="Instagram">
+							<img src="img/icon-social-insta.svg" width="25" height="25">
+						</a>
+					</li>
 				</ul>
 				<div class="social-right-block">
 					<p class="social-slogan"><b>Давайте дружить, это выгодно!</b></p>
@@ -198,15 +204,15 @@
 			<form action="https://echo.htmlacademy.ru" method="post" class="write-us-100">
 				<div class="write-us-50 form-element">
 					<label for="user-name">Ваше имя:</label>
-					<input id="user-name" type="text" name="user name" placeholder="Имя Фамилия" >
+					<input id="user-name" required type="text" name="user name" placeholder="Имя Фамилия" >
 				</div>
 				<div class="write-us-50 form-element">
 					<label for="user-email">Ваш e-mail:</label>
-					<input id="user-email" type="email" name="user email" placeholder="email@example.com">
+					<input id="user-email" required type="email" name="user email" placeholder="email@example.com">
 				</div>
 				<div class="write-us-100 form-element form-element-text">
 					<label for="message-text">Текст письма:</label>
-					<textarea id="message-text" type="text" name="message text" placeholder="В свободной форме"></textarea>
+					<textarea id="message-text" required type="text" name="message text" placeholder="В свободной форме"></textarea>
 				</div>
 				<button class="button button-send">Отправить</button>
 			</form>
