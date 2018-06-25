@@ -1,5 +1,8 @@
+* {
+    outline: 1px dashed red;
+}
+
 .screenshot-preview {
-    display: block !important;
     z-index: -1; 
     text-align: center; 
     position: absolute;

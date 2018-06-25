@@ -133,16 +133,19 @@ a.main-header-logo:active {
     margin: 0;
     padding: 0; 
     width: 800px;
-    padding-top: 80px; 
+    margin-top: 80px; 
     display: flex;    
     justify-content: center;
+}
+.site-navigation ul {
+    display: flex;
     list-style: none;
 }
-.site-navigation > li  {
+.site-navigation  li  {
     margin: 0px 40px 5px 5px;
 }
-.site-navigation > li > a, 
-.cart > a {
+.navigation-item {
+    text-transform: uppercase; 
     font-weight: bold; 
     font-size: 16px;
     color: black;
@@ -166,8 +169,17 @@ a.main-header-logo:active {
     width: 100%;
     background: #fb565a;
     position: absolute;
-    bottom: 5px;
+    left: 0px;
+    top: 25px;
 }
+.cart-item {
+    display: flex;    
+    margin-top: 80px; 
+    align-items: center;
+    background: url("../img/icon-cart.svg") left no-repeat;
+    padding-left: 30px;
+}
+
 
 .main-navigation > .cart {
     width: 200px;
