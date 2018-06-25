@@ -323,20 +323,22 @@ a.main-header-logo:active {
 }
 
 .about-us-left-block > .about-us-slogan { 
-    margin: 65px 10px 0 10px;   
+    margin: 65px 10px 0;   
 }
 
 .about-us-left-block > .services-header { 
-    margin: 42px 10px 0 10px;
+    margin: 42px 10px 0;
     font-weight: 900;
 }
 
 .about-us-left-block > .services-list {
-    list-style: "-"; /*TODO*/
+    padding-left: 0px; 
+    list-style: none;
 }
-.about-us-left-block > .services-list > li {
+.services-list > li {
     margin: 10px;
-    padding: 10px 0;
+    padding: 10px 0 10px 30px;
+    background: url("../img/icon-red-line.png") left no-repeat;
 }
 
 .about-us-right-block {
