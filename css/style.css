@@ -60,7 +60,7 @@
 .button:hover {
     background: #e74246;    
 }
-.button:active:not(.button-slide) {
+.button:active {
     background: #d7373b;    
     color: rgba(255, 255, 255, 0.30);
     box-shadow: inset 0px 3px 0px 0px #c13135;
@@ -228,6 +228,7 @@ a.main-header-logo:active {
     justify-content: center;
     list-style: none;
 }
+
 .button-slide {
     width: 18px;
     height: 18px;
@@ -252,6 +253,7 @@ a.main-header-logo:active {
 .button-slide:active,
 .button-slide:checked + label:hover::before  {
     background: white;
+    box-shadow: unset;
 }
 .button-slide::before {
     content: "";
@@ -1010,16 +1012,18 @@ button.filter-button:focus {
 
 .order-buttons {
     display: flex;
-    margin-left: 15px;
+    justify-content: space-between;
+    margin-left: 37px;
     margin-right: 0;
+    width: 40px;
 }
 
 .order-buttons a {
     opacity: 0.3;
     display: block;
-    width: 8px;
+    width: 11px;
     height: 10px;
-    margin: 5px 0 0 22px;
+    margin: 5px 0 0 0;
 }
 
 .order-buttons a:hover {
