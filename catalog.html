@@ -23,13 +23,13 @@
 				</a>
 				<div class="site-navigation">
 					<ul>
-						<li><a class="navigation-item" href="info.html">Студия</a></li>
-						<li><a class="navigation-item" href="clients.html">Клиенты</a></li>
+						<li><a class="navigation-item" href="#">Студия</a></li>
+						<li><a class="navigation-item" href="#">Клиенты</a></li>
 						<li><a class="navigation-item selected" href="catalog.html">Магазин</a></li>
-						<li><a class="navigation-item" href="contacts.html">Контакты</a></li>
+						<li><a class="navigation-item" href="#">Контакты</a></li>
 					</ul>
 				</div>			
-				<a class="navigation-item cart-item" href="cart.html">Корзина</a>	
+				<a class="navigation-item cart-item" href="#">Корзина</a>	
 			</nav>
 			<h1>Магазин готовых шаблонов</h1>
 		</header>
@@ -58,10 +58,10 @@
 						<legend>Сетка:</legend>
 						<ul>
 							<li>
-								<input type="radio" name="grid-type" value="adaptive" id="filter-grid-adaptive" checked>
 								<label for="filter-grid-adaptive">
 									<span></span>Адаптивная
 								</label>
+								<input type="radio" name="grid-type" value="adaptive" id="filter-grid-adaptive" checked>
 							</li>
 							<li>
 								<input type="radio" name="grid-type" value="fixed" id="filter-grid-fixed">
@@ -250,7 +250,7 @@
 							<h3 class="address-header">Nёrds Design Studio</h3>
 							<p>191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
 							<p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-							<button type="button" class="button button-write-us">Напишите нам</button>
+							<a href="#modal-write-us" class="button button-write-us">Напишите нам</a>
 						</div>
 					</div>
 					<!--<img class="map-marker" src="img/map-marker.png" width="367" height="190" alt="Указатель на карте">-->
@@ -281,29 +281,29 @@
 				</div>
 			</section>
 		</footer>
-		
-		<section class="modal modal-write-us container">
-			<div class="modal-write-us-header">
+
+		<div id="modal-write-us" class="modal-container">
+			<section class="modal modal-write-us container">
 				<h2>Напишите нам</h2>
-			</div>
-			<button type="button" class="button-close" title="Закрыть">
-				<img src="img/icon-close-cross.svg" width="25" height="25" alt="Закрыть">
-			</button>
-			<form action="https://echo.htmlacademy.ru" method="post" class="write-us-100">
-				<div class="write-us-50 form-element">
-					<label for="user-name">Ваше имя:</label>
-					<input id="user-name" required type="text" name="user name" placeholder="Имя Фамилия" >
-				</div>
-				<div class="write-us-50 form-element">
-					<label for="user-email">Ваш e-mail:</label>
-					<input id="user-email" required type="email" name="user email" placeholder="email@example.com">
-				</div>
-				<div class="write-us-100 form-element form-element-text">
-					<label for="message-text">Текст письма:</label>
-					<textarea id="message-text" required type="text" name="message text" placeholder="В свободной форме"></textarea>
-				</div>
-				<button class="button button-send">Отправить</button>
-			</form>
-		</section>
+				<a href="#close" class="button-close" title="Закрыть">
+					<img src="img/icon-close-cross.svg" width="25" height="25" alt="Закрыть">
+				</a>
+				<form action="https://echo.htmlacademy.ru" method="post">
+					<div class="form-element">
+						<label for="user-name">Ваше имя:</label>
+						<input id="user-name" required type="text" name="user name" placeholder="Имя Фамилия" >
+					</div>
+					<div class="form-element">
+						<label for="user-email">Ваш e-mail:</label>
+						<input id="user-email" required type="email" name="user email" placeholder="email@example.com">
+					</div>
+					<div class="form-element form-element-text">
+						<label for="message-text">Текст письма:</label>
+						<textarea id="message-text" required name="message text" placeholder="В свободной форме"></textarea>
+					</div>
+					<button class="button button-send">Отправить</button>
+				</form>
+			</section>
+		</div>
 	</body> 
 </html>

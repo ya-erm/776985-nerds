@@ -1,3 +1,4 @@
+
 /*
 * {
     outline: 1px dashed red;
@@ -59,9 +60,10 @@
 .button:hover {
     background: #e74246;    
 }
-.button:active {
+.button:active:not(.button-slide) {
     background: #d7373b;    
     color: rgba(255, 255, 255, 0.30);
+    box-shadow: inset 0px 3px 0px 0px #c13135;
 }
 
 .button-green {
@@ -72,6 +74,7 @@
 }
 .button-green:active {
     background: #00aa62;
+    box-shadow: inset 0px 3px 0px 0px #009958;
 }
 
 .button-yellow {
@@ -82,6 +85,7 @@
 }
 .button-yellow:active {
     background: #e5a722;
+    box-shadow: inset 0px 3px 0px 0px #ce961f;
 }
 
 body {   
@@ -156,7 +160,7 @@ a.main-header-logo:active {
     color: black;
     opacity: 1.0;
 }
-.navigation-item:hover {
+.navigation-item:hover:not(.selected) {
     color: #fb565a;
 }
 .navigation-item:active {
@@ -185,7 +189,7 @@ a.main-header-logo:active {
 }
 
 
-.main-navigation > .cart {
+.cart {
     width: 200px;
     padding-top: 80px;
     text-align: left;
@@ -400,17 +404,17 @@ a.main-header-logo:active {
     list-style: none;
 }
 
-.statistic > li > p {
+.statistic p {
     text-align: left;
     margin: 20px 10px 0 10px;
 }
-.statistic > li > p.percentages {
+.statistic p.percentages {
     margin: 0 11px; 
     font-size: 45px;
     line-height: 45px;
     font-weight: 700; 
 }
-.statistic > li > p.percentages > sup {
+.statistic sup {
     font-size: 28px;
 }
 
@@ -438,7 +442,8 @@ a.main-header-logo:active {
 }
 
 .main-footer {
-    padding: 70px 0;
+    margin-top: 25px;
+    padding: 20px 0 70px;
 }
 
 .map {
@@ -488,21 +493,22 @@ a.main-header-logo:active {
 
 .address p {
     margin-top: 18px;
-    color: #666666
+    color: #666666;
 }
 
 .address a {
     line-height: 19px;
-    color: #666666
+    color: #666666;
 }
 .address a:hover {
-    color: #fb565a
+    color: #fb565a;
 }
 
-.button-write-us {
+a.button-write-us {
     margin-top: 36px;
     width: 220px;
     height: 50px;
+    color: white;
 }
 
 .social {
@@ -537,6 +543,7 @@ a.main-header-logo:active {
 }
 .social-item:active {
     background-color: #d7373b; 
+    box-shadow: inset 0px 3px 0px 0px #c13135;
 }
 .social-item img {
     margin: auto;
@@ -563,24 +570,46 @@ a.main-header-logo:active {
     padding: 0;
 }
 
+.modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 99999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    display: none;
+    pointer-events: none;
+}
+
 .modal {
     display: flex;
+    position: absolute;
+    margin: 0 auto;
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-between;
-    background-color: #eeeeee;
+    background-color: #ffffff;
     padding: 48px 80px;
+    right: 0;
+    left: 0;
+    margin: 200px auto;
+}
+
+.modal-container:target {
+    display: flex;
+    pointer-events: auto;
 }
 
 .modal-write-us {
+    box-sizing: border-box;
     width: 960px;
+    box-shadow: 0 15px 40px 0px rgba(0, 1, 1, 0.75);
 }
-.write-us-50 {
-    width: 360px;
-}
-.write-us-100 {
-    width: 100%;
-}
+
 .modal-write-us h2 {
     margin: 20px;
     font-size: 45px;
@@ -589,28 +618,85 @@ a.main-header-logo:active {
 .modal-write-us > form {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
+
+.modal-write-us input,
+.modal-write-us textarea {
+    box-sizing: border-box;
+    border: 2px solid #d7dcde;
+    border-radius: 2px;
+    
+}
+
+.modal-write-us input:hover,
+.modal-write-us textarea:hover {
+    border: 2px solid #b4b9bb;
+}
+
+.modal-write-us input:focus,
+.modal-write-us textarea:focus {
+    border: 2px solid black;
+    outline: 0;
+}
+
+.modal-write-us input:invalid,
+.modal-write-us textarea:invalid {
+    border: 2px solid #e74246;
+    outline: 0;
+}
+
+.modal-write-us input::placeholder,
+.modal-write-us textarea::placeholder {
+    color: rgba(68, 68, 68, 0.5);
+}
+
+.modal-write-us input:hover::placeholder,
+.modal-write-us textarea:hover::placeholder {
+    color: rgba(68, 68, 68, 0.5);
+}
+
+.modal-write-us input:focus::placeholder,
+.modal-write-us textarea:focus::placeholder {
+    color: rgba(68, 68, 68, 1);
+}
+
+.modal-write-us input:invalid::placeholder,
+.modal-write-us textarea:invalid::placeholder {
+    color: #e74246;
+}
+
 .form-element {
     margin: 20px;
+    width: 360px;
 }
+
+.form-element-text {
+    margin: 20px;
+}
+
 .form-element > label {
     display: block;
     font-weight: 700;
     line-height: 18px;
     margin-bottom:  10px;
 }
+
 .form-element > input {
     padding: 0 10px;
     width: 360px;
     height: 50px;
-}
+} 
+
 .form-element-text {
     margin: 8px 20px 0 20px;
+    width: 100%;
 }
 .form-element > textarea {
     width: 760px;
     height: 115px;
     padding: 10px;
+    resize: none;
 }
 .button-send {
     margin: 24px 20px 0 20px;
@@ -620,7 +706,6 @@ a.main-header-logo:active {
 .button-close {
     margin: 0;
     padding: 5px;
-    margin-right: 20px;
     border-color: transparent; 
     background-color: transparent;
     opacity: 0.3;
@@ -639,16 +724,16 @@ a.main-header-logo:active {
     margin:0;
     margin-bottom:10px;
 }
-.range-controls{
+.range-controls {
     position:relative;
     height:80px;
-    margin-bottom:15px;
+    margin-bottom:13px;
     padding:0 30px;
     background:#eeeeee;
     border-radius:5px;
     overflow:hidden;
 }
-.scale{
+.scale {
     margin-top:39px;
     height:2px;
     background:#d7dcde;
@@ -701,11 +786,9 @@ a.main-header-logo:active {
 .price-controls {
     font-size: 16px;
     line-height: 22px;
-    margin-top: -2px;
 }
 
 /*Конец*/
-
 
 
 /* catalog */
@@ -715,15 +798,17 @@ a.main-header-logo:active {
     line-height: 55px;
     padding: 40px 21px 100px 0;
     text-align: center;
+    min-width: 1200px;
+    
 }
 
 .main-page-catalog {
     display: flex;
     justify-content: space-between;
-    margin-bottom: -25px;
+    margin-bottom: 0px;
 }
 
-/*фильтры*/
+/* /*фильтры*/
 
 .filtration {
     margin-left: 10px;
@@ -736,6 +821,10 @@ a.main-header-logo:active {
     line-height: 30px;
     margin-top: 25px;
     text-transform: uppercase;
+}
+
+.cost {
+    font-weight: 10px;
 }
 
 .grid  {
@@ -763,17 +852,17 @@ a.main-header-logo:active {
     margin-bottom: 15px;
 }
 
-.grid li label{
+.grid label{
     font-size: 16px;
     line-height: 20px;
     opacity: 0.4;
 }
 
-.grid input + label span {
+.grid span {
     display:inline-block;
     width:25px;
     height:25px;
-    margin:-1px 10px 0 0;
+    margin:0 10px 0 0;
     vertical-align:middle;
     background:url("../img/icon-radio-off.svg") left top no-repeat;
     cursor:pointer;
@@ -787,7 +876,7 @@ a.main-header-logo:active {
     opacity: 1;
 }
 
-.filtration li label{
+.filtration label{
     font-size: 16px;
     line-height: 20px;
     opacity: 0.4;
@@ -821,7 +910,7 @@ a.main-header-logo:active {
     margin-bottom: 15px;
 }
 
-.features li label{
+.features label{
     font-size: 16px;
     line-height: 20px;
 }
@@ -830,7 +919,7 @@ a.main-header-logo:active {
     display:inline-block;
     width:25px;
     height:25px;
-    margin:-1px 10px 0 0;
+    margin: 0px 10px 0 0;
     vertical-align:middle;
     background:url("../img/icon-checkbox-off.svg") left top no-repeat;
     cursor:pointer;
@@ -895,7 +984,8 @@ button.filter-button:focus {
     opacity: 0.6;
 }
 
-.sort-button-list a:active, .sort-button-list a.active  {
+.sort-button-list a:active, 
+.sort-button-list a.active  {
     opacity: 1;
 }
 
@@ -903,7 +993,7 @@ button.filter-button:focus {
     margin: 2px 11px 0 14px;
 }
 
-.sorting>p {
+.sorting > p {
     font-size: 18px;
     line-height: 18px;
     text-align: center;
@@ -936,7 +1026,8 @@ button.filter-button:focus {
     opacity: 0.6;
 }
 
-.order-buttons a:active, .order-buttons a.active  {
+.order-buttons a:active, 
+.order-buttons a.active  {
     opacity: 1;
 }
 
@@ -964,7 +1055,6 @@ button.filter-button:focus {
     list-style: none;
     position: relative;
     padding-top: 40px;
-    box-shadow: inset 0 0 0 1px #eeeeee;
 }
 
 .template-item:nth-child(2n) {
@@ -994,21 +1084,26 @@ button.filter-button:focus {
 .description-window h3 {
     text-transform: uppercase;
     color: black;
-}
-
-.description-window h3:hover {
-    color: #fb565a;
-    text-decoration: underline;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 5px; 
+    margin-right: 2px;
 }
 
 .description-window p {
-    margin-right: -10px;
-    margin-left: -10px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 15px;
 }
 
 .button-price {
     width: 200px;
     height: 50px;
+}
+
+.description-window .button-price {
+    margin-top: 30px;
+    margin-bottom: 1px;
 }
 
 .wrapper-template {
