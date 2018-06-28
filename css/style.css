@@ -188,7 +188,6 @@ a.main-header-logo:active {
     margin-right: 30px;
 }
 
-
 .cart {
     width: 200px;
     padding-top: 80px;
@@ -332,7 +331,6 @@ a.main-header-logo:active {
     margin: 0;
     margin-top: 20px;
     line-height: 24px;
-    /*TODO: буквы шире!*/
 }
 
 .offer-list a {
