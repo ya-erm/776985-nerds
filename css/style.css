@@ -239,7 +239,7 @@ a.main-header-logo:active {
     z-index: 10;
     top: 311px;
 }
-.slide-first .button-slide{
+.slide-first .button-slide {
     left: 541px;
 }
 .slide-second .button-slide {
@@ -250,7 +250,7 @@ a.main-header-logo:active {
 }
 .button-slide:hover,
 .button-slide:active,
-.button-slide:checked + label:hover::before  {
+.button-slide:checked + label:hover::before {
     background: white;
     box-shadow: unset;
 }
@@ -346,7 +346,7 @@ a.main-header-logo:active {
     height: 510px;
 }
 
-.about-us-left-block p.about-us-slogan  {
+.about-us-left-block p.about-us-slogan {
     margin: 65px 10px 0;
     font-weight: 500; 
     font-size: 45px;
@@ -679,7 +679,7 @@ a.button-write-us {
     display: block;
     font-weight: 700;
     line-height: 18px;
-    margin-bottom:  10px;
+    margin-bottom: 10px;
 }
 
 .form-element > input {
@@ -719,24 +719,24 @@ a.button-write-us {
 
 /* Фильтр с диапазоном цены */
 .range-filter {
-    padding-top:50px;
-    width:260px;
-    margin:0;
-    margin-bottom:10px;
+    padding-top: 50px;
+    width: 260px;
+    margin: 0;
+    margin-bottom: 10px;
 }
 .range-controls {
-    position:relative;
-    height:80px;
-    margin-bottom:13px;
-    padding:0 30px;
-    background:#eeeeee;
-    border-radius:5px;
-    overflow:hidden;
+    position: relative;
+    height: 80px;
+    margin-bottom: 13px;
+    padding: 0 30px;
+    background :#eeeeee;
+    border-radius: 5px;
+    overflow: hidden;
 }
 .scale {
-    margin-top:39px;
-    height:2px;
-    background:#d7dcde;
+    margin-top: 39px;
+    height: 2px;
+    background: #d7dcde;
 }
 
 .bar {
@@ -746,40 +746,40 @@ a.button-write-us {
     width:100px;
 }
 
-.min-toggle, .max-toggle{
-    position:absolute;
-    top:30px;
-    left:30px;
-    width:4px;
-    height:4px;
-    border:8px solid white;
-    background:#ababab;
-    cursor:pointer;
-    border-radius:50%;
+.min-toggle, .max-toggle {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid white;
+    background: #ababab;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 .toggle.min-toggle {
-    left:70px;
+    left: 70px;
 }
 
 .toggle.max-toggle {
-    left:165px;
+    left: 165px;
 }
 
 .price-controls input{
     width: 58px;
     height: 22px;
     padding:8px 10px;
-    margin-left:8px;
-    border:none;
-    background:#eeeeee;
-    font-size:16px;
-    text-align:center;
-    color:#283136;
+    margin-left: 8px;
+    border: none;
+    background: #eeeeee;
+    font-size: 16px;
+    text-align: center;
+    color: #283136;
 }
 
-.price-controls input:first-child{
-    margin-right:30px;
+.price-controls input:first-child {
+    margin-right: 30px;
     margin-left: 10px; 
 }
 
@@ -815,7 +815,7 @@ a.button-write-us {
     width: 260px;
 }
 
-.cost{
+.cost {
     display: block;
     font-size: 18px;
     line-height: 30px;
@@ -827,7 +827,7 @@ a.button-write-us {
     font-weight: 10px;
 }
 
-.grid  {
+.grid {
     padding-left: 0;
     border: none;
     margin-top: 58px;
@@ -848,35 +848,35 @@ a.button-write-us {
     display:none;
 }
 
-.grid li{
+.grid li {
     margin-bottom: 15px;
 }
 
-.grid label{
+.grid label {
     font-size: 16px;
     line-height: 20px;
     opacity: 0.4;
 }
 
 .grid span {
-    display:inline-block;
-    width:25px;
-    height:25px;
-    margin:0 10px 0 0;
-    vertical-align:middle;
-    background:url("../img/icon-radio-off.svg") left top no-repeat;
-    cursor:pointer;
+    width: 25px;
+    height: 25px;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../img/icon-radio-off.svg") left top no-repeat;
+    cursor: pointer;
 }
 
 .grid input:checked + label span {
-    background:url("../img/icon-radio-on.svg") left top no-repeat;
+    background: url("../img/icon-radio-on.svg") left top no-repeat;
 }
 
 .filtration input + label:hover {
     opacity: 1;
 }
 
-.filtration label{
+.filtration label {
     font-size: 16px;
     line-height: 20px;
     opacity: 0.4;
@@ -903,30 +903,30 @@ a.button-write-us {
 }
 
 .features ul input {
-    display:none;
+    display: none;
 }
 
-.features li{
+.features li {
     margin-bottom: 15px;
 }
 
-.features label{
+.features label {
     font-size: 16px;
     line-height: 20px;
 }
 
 .features input + label span {
-    display:inline-block;
-    width:25px;
-    height:25px;
+    width: 25px;
+    height: 25px;
     margin: 0px 10px 0 0;
-    vertical-align:middle;
-    background:url("../img/icon-checkbox-off.svg") left top no-repeat;
-    cursor:pointer;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../img/icon-checkbox-off.svg") left top no-repeat;
+    cursor: pointer;
 }
 
 .features input:checked + label span {
-    background:url("../img/icon-checkbox-on.svg") left top no-repeat;
+    background: url("../img/icon-checkbox-on.svg") left top no-repeat;
 }
 
 .filtration legend {
@@ -942,7 +942,6 @@ button.filter-button {
 
 button.filter-button:focus {
     outline: 0;
-
 }
 
 .view-product {
@@ -960,19 +959,19 @@ button.filter-button:focus {
 
 .sorting p {
     text-transform: uppercase;
-    margin: 10px 0;
     font-weight: 500;
+    margin: 10px 0;
 }
 
 .sort-button-list {
     margin: 10px 0px 8px 214px;
 }
 
-.sort-button-list a{    
+.sort-button-list a {    
     text-transform: uppercase;
 }
 
-.sort-button-list a{
+.sort-button-list a {
     font-size: 14px;
     line-height: 18px;
     text-decoration-line: none;
@@ -1034,11 +1033,11 @@ button.filter-button:focus {
 }
 
 .order-buttons p:first-of-type a {
-    background:  url("../img/icon-cursor-down-dir.svg") no-repeat;
+    background: url("../img/icon-cursor-down-dir.svg") no-repeat;
 }
 
 .order-buttons p:last-of-type a {
-    background:  url("../img/icon-cursor-up-dir.svg") no-repeat;
+    background: url("../img/icon-cursor-up-dir.svg") no-repeat;
 }
 
 
@@ -1165,7 +1164,7 @@ button.filter-button:focus {
 }
 
 .pagination-item-previous a,
-.pagination-item-next a{
+.pagination-item-next a {
     width: 260px;
 }
 
