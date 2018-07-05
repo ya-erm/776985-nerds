@@ -92,7 +92,6 @@ body {
     padding: 0; 
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 16px;
-    margin-left: 20px;
 }
 
 a {
@@ -103,6 +102,7 @@ a {
     margin: 0 auto;
     padding: 0 10px;
     width: 1200px;
+    padding-left: 30px;
 }
 
 .relative {
@@ -139,17 +139,14 @@ a.main-header-logo:active {
     padding: 0; 
     width: 800px;
     display: flex;    
-    justify-content: center;
     margin-bottom: 15px; 
-}
-.site-navigation ul {
     display: flex;
-    margin: 0 auto;
-    margin-left: 110px;
+
+    margin-left: 186px;
     list-style: none;    
 }
 .site-navigation li {
-    margin: 0 40px 0 5px;
+    margin: 0 40px 0 6px;
 }
 .navigation-item {
     text-transform: uppercase; 
@@ -450,9 +447,10 @@ a.main-header-logo:active {
 }
 
 .map { 
+    background-color: #e9e5dc;
     background-image: url("../img/map.png");
     background-repeat: no-repeat;
-    background-position-x: calc(50% - 10px);
+    background-position-x: 50%;
     height: 420px;
     width: 100%;
 }
@@ -772,7 +770,7 @@ a.button-write-us {
     width: 58px;
     height: 22px;
     padding: 8px 10px;
-    margin-left: 8px;
+    margin-left: 10px;
     border: none;
     background: #eeeeee;
     font-size: 16px;
@@ -780,14 +778,19 @@ a.button-write-us {
     color: #283136;
 }
 
-.price-controls input:first-child{
-    margin-right: 30px;
-    margin-left: 10px; 
+.price-controls label:first-child{
+    margin-right: 28px; 
 }
 
 .price-controls {
     font-size: 16px;
     line-height: 22px;
+}
+
+.price-controls .price-label-range {
+    margin: 0;
+    padding-left: 0; 
+    padding-right: 0;
 }
 /*Конец*/
 
@@ -843,7 +846,6 @@ a.button-write-us {
 }
 
 .grid ul input {
-    display:none;
 }
 
 .grid li {
@@ -859,11 +861,17 @@ a.button-write-us {
 .grid input + label {
     background: url("../img/icon-radio-off.svg") left no-repeat;
     cursor: pointer;
+    
 }
 
 .grid input:checked + label {
     background: url("../img/icon-radio-on.svg") left no-repeat;
 }
+
+.grid input:focus + label {
+    outline: auto;
+}
+
 
 .filtration input + label:hover {
     opacity: 1;
@@ -894,10 +902,6 @@ a.button-write-us {
     list-style: none;
 }
 
-.features ul input { /*TODO: убрать 3 селектора */
-    display:none;
-}
-
 .features li {
     margin-bottom: 17px;
 }
@@ -913,6 +917,10 @@ a.button-write-us {
 
 .features input:checked + label {
     background: url("../img/icon-checkbox-on.svg") left 50%  no-repeat;
+}
+
+.features input:focus + label {
+    outline: auto;
 }
 
 .filtration legend {

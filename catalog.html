@@ -21,14 +21,12 @@
 				<a class="main-header-logo" href="index.html" title="Главная страница"> 
 					<img src="img/logo-nerds.svg" width="160" height="65" alt="Логотип дизайн-студии «Nerds»">
 				</a>
-				<div class="site-navigation">
-					<ul>
-						<li><a class="navigation-item" href="#">Студия</a></li>
-						<li><a class="navigation-item" href="#">Клиенты</a></li>
-						<li><span class="navigation-item selected">Магазин</span></li>
-						<li><a class="navigation-item" href="#">Контакты</a></li>
-					</ul>
-				</div>			
+				<ul class="site-navigation">
+					<li><a class="navigation-item" href="#">Студия</a></li>
+					<li><a class="navigation-item" href="#">Клиенты</a></li>
+					<li><span class="navigation-item selected">Магазин</span></li>
+					<li><a class="navigation-item" href="#">Контакты</a></li>
+				</ul>		
 				<a class="navigation-item cart-item" href="#">Корзина</a>	
 			</nav>
 			<h1 class="container">Магазин готовых шаблонов</h1>
@@ -48,9 +46,12 @@
 								<div class="toggle max-toggle"></div>
 							</div>
 							<div class="price-controls">
-								от
-								<input class="min-price" type="text" value="5 000"> до
-								<input class="max-price" type="text" value="15 000">
+								<label class="price-label-range">от
+									<input class="min-price" type="text" value="5 000"> 
+								</label>	
+								<label class="price-label-range">до
+									<input class="max-price" type="text" value="15 000">
+								</label>
 							</div>
 						</div>
 					</div>
@@ -58,19 +59,19 @@
 						<legend>Сетка:</legend>
 						<ul>
 							<li>
-								<input type="radio" name="grid-type" value="adaptive" id="filter-grid-adaptive" checked>
+								<input class="visually-hidden" type="radio" name="grid-type" value="adaptive" id="filter-grid-adaptive" checked>
 								<label for="filter-grid-adaptive">
 									Адаптивная
 								</label>
 							</li>
 							<li>
-								<input type="radio" name="grid-type" value="fixed" id="filter-grid-fixed">
+								<input class="visually-hidden" type="radio" name="grid-type" value="fixed" id="filter-grid-fixed">
 								<label for="filter-grid-fixed">
 									Фиксированная
 								</label>
 							</li>
 							<li>
-								<input type="radio" name="grid-type" value="flexed" id="filter-grid-flexed">
+								<input class="visually-hidden" type="radio" name="grid-type" value="flexed" id="filter-grid-flexed">
 								<label for="filter-grid-flexed">
 									Резиновая
 								</label>
@@ -81,31 +82,31 @@
 						<legend>Особенности:</legend>
 						<ul>
 							<li>
-								<input type="checkbox" name="slider" id="filter-features-slider" checked>
+								<input class="visually-hidden" type="checkbox" name="slider" id="filter-features-slider" checked>
 								<label for="filter-features-slider">
 									Слайдер
 								</label>
 							</li>
 							<li>
-								<input type="checkbox" name="advantages" id="filter-features-advantages">
+								<input class="visually-hidden" type="checkbox" name="advantages" id="filter-features-advantages">
 								<label for="filter-features-advantages">
 									Блок преимуществ
 								</label>
 							</li>
 							<li>
-								<input type="checkbox" name="news" id="filter-features-news" checked>
+								<input class="visually-hidden" type="checkbox" name="news" id="filter-features-news" checked>
 								<label for="filter-features-news">
 									Новости
 								</label>
 							</li>
 							<li>
-								<input type="checkbox" name="gallery" id="filter-features-gallery">
+								<input class="visually-hidden" type="checkbox" name="gallery" id="filter-features-gallery">
 								<label for="filter-features-gallery">
 									Галерея
 								</label>
 							</li>
 							<li>
-								<input type="checkbox" name="cart" id="filter-features-cart">
+								<input class="visually-hidden" type="checkbox" name="cart" id="filter-features-cart">
 								<label for="filter-features-cart">
 									Корзина
 								</label>
