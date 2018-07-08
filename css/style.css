@@ -92,6 +92,7 @@ body {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     color: #283136;
+    min-width: 1200px;
 }
 
 a {
@@ -794,7 +795,7 @@ a.button-write-us {
     position: relative;
     height: 80px;
     margin-bottom: 13px;
-    padding: 0 30px;
+    padding: 0 21px;
     background: #eeeeee;
     border-radius: 3px;
     overflow: hidden;
@@ -809,8 +810,8 @@ a.button-write-us {
 .bar {
     height: 2px;
     background: #00ca74;
-    margin-left: 50px;
-    width: 100px;
+    margin-left: 8px;
+    width: 134px;
 }
 
 .min-toggle, .max-toggle{
@@ -826,11 +827,11 @@ a.button-write-us {
 }
 
 .toggle.min-toggle {
-    left: 70px;
+    left: 18px;
 }
 
 .toggle.max-toggle {
-    left: 165px;
+    left: 160px;
 }
 
 .price-controls input{
