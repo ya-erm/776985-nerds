@@ -259,12 +259,14 @@ a.main-header-logo:active {
 .button-slide:active,
 .button-slide:checked + label:hover::before  {
     background: white;
-    box-shadow: unset;
+    box-shadow: none;
 }
 
 .button-slide::before {
     content: "";
     position: absolute;
+    top: 5px;
+    left: 5px;
     width: 4px;
     height: 4px;
     border-radius: 50%;
