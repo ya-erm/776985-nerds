@@ -2,8 +2,8 @@
 @font-face {
     font-family: "Roboto";
     src:
-        url("fonts/roboto.woff2") format("woff2"),
-        url("fonts/roboto.woff") format("woff");
+        url("../fonts/roboto.woff2") format("woff2"),
+        url("../fonts/roboto.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -11,8 +11,8 @@
 @font-face {
     font-family: "Roboto";
     src: 
-        url("fonts/robotomedium.woff2") format("woff2"),
-        url("fonts/robotomedium.woff") format("woff");
+        url("../fonts/robotomedium.woff2") format("woff2"),
+        url("../fonts/robotomedium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
 }
@@ -20,8 +20,8 @@
 @font-face {
     font-family: "Roboto";
     src:
-    url("fonts/robotobold.woff2") format("woff2"),
-    url("fonts/robotobold.woff") format("woff");
+    url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
 }
@@ -39,11 +39,12 @@
 
 .button {   
     font-weight: 500; 
-    border: transparent;
+    line-height: 17px;
     text-transform: uppercase; 
     background: #fb565a;
+    border: transparent;
+    border-radius: 3px;
     color: white;
-    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,10 +91,21 @@ body {
     padding: 0; 
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
+    color: #283136;
 }
 
 a {
     text-decoration: none;
+}
+
+section.underlined::after {
+    content: "";
+    display: block;
+    margin-bottom: 16px;
+    background: #eee;
+    position: relative;
+    height: 2px;
+    top: 6px;
 }
 
 .container {
@@ -300,7 +312,8 @@ a.main-header-logo:active {
     max-width: 550px;
 }
 
-.feature > h2 {
+.feature > h2 { 
+    color: black;
     font-size: 55px;
     font-weight: 500;
     line-height: 55px;
@@ -322,9 +335,8 @@ a.main-header-logo:active {
 
 .offer-list {
     margin: 0;
-    margin-top: 1px;
     padding: 0 10px;
-    height: 500px;
+    min-height: 500px;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -332,7 +344,7 @@ a.main-header-logo:active {
 }
 
 .offer-list li {
-    margin: 79px 0 0 0;
+    margin: 80px 0 0 0;
     width: 300px;
 }
 
@@ -342,6 +354,7 @@ a.main-header-logo:active {
     font-size: 24px;     
     line-height: 24px;
     font-weight: 700;
+    color: black;
     text-transform: uppercase; 
 }
 
@@ -362,7 +375,7 @@ a.main-header-logo:active {
 
 .about-us {
     display: flex;
-    height: 510px;
+    min-height: 510px;
 }
 
 .about-us-left-block p.about-us-slogan {
@@ -377,19 +390,21 @@ a.main-header-logo:active {
 }
 
 .about-us-left-block > p {
-    margin: 33px 10px 0 10px;
+    margin: 34px 10px 0 10px;
     line-height: 23px;
     padding-right: 100px;
 }
 
 .about-us-left-block > .about-us-slogan { 
     margin: 65px 10px 0;   
+    color: black;
 }
 
 .about-us-left-block > .services-header { 
     text-transform: uppercase;
     margin: 40px 10px 0;
-    font-weight: 700;
+    font-weight: 700; 
+    color: black;
 }
 
 .about-us-left-block > .services-list {
@@ -412,7 +427,8 @@ a.main-header-logo:active {
 }
 
 .statistic-slogan {
-    margin-top: 33px;
+    color: black;
+    margin-top: 34px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -431,6 +447,7 @@ a.main-header-logo:active {
 }
 
 .statistic p.percentages {
+    color: black;
     margin: 0 11px; 
     font-size: 45px;
     line-height: 45px;
@@ -442,12 +459,11 @@ a.main-header-logo:active {
 }
 
 .partners {
-    height: 173px;
+    height: 174px;
 }
 
 .partners-list {
-    margin: 0;
-    margin-top: -10px; 
+    margin: -10px 0;
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
@@ -472,7 +488,7 @@ a.main-header-logo:active {
 }
 
 .main-footer-index {
-    margin-top: 58px;
+    margin-top: 68px;
 }
 
 .map { 
@@ -514,17 +530,19 @@ a.main-header-logo:active {
     margin-top: 50px;
 }
 
-.address-header {
-    text-transform: uppercase;
+.address-header { 
+    color: black;
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 26px;
+    line-height: 18px;
+    margin-bottom: 29px;
+    text-transform: uppercase;
 }
 
 .address p {
-    margin-top: 18px;
-    color: #666666;
     padding-right: 10px;
+    margin: 18px 2px 0px 2px;
+    color: #666666;
 }
 
 .address a:not(.button) {
@@ -542,7 +560,7 @@ a.main-header-logo:active {
 }
 
 a.button-write-us {
-    margin-top: 37px;
+    margin-top: 36px;
     width: 220px;
     height: 50px;
     color: white;
@@ -603,9 +621,11 @@ a.button-write-us {
     font-size: 36px;
     font-weight: 700;
     line-height: 36px;
+    color: black;
 }
 
 .social-description {
+    color: #444444;
     margin: 12px 0 0;
     padding: 0;
 }
@@ -646,11 +666,12 @@ a.button-write-us {
     width: 960px;
     box-shadow: 0 15px 40px 0px rgba(0, 1, 1, 0.75);
 }
-
+ 
 .modal-write-us h2 {
     margin: 20px;
     font-size: 45px;
     line-height: 45px;
+    color: black;   
 }
 
 .modal-write-us > form {
@@ -712,6 +733,7 @@ a.button-write-us {
 }
 
 .form-element > label {
+    color: black;
     display: block;
     font-weight: 700;
     line-height: 18px;
@@ -746,6 +768,10 @@ a.button-write-us {
     padding: 5px;
     border-color: transparent; 
     background-color: transparent;
+    width: 25px;
+    height: 25px;
+    background: url("../img/icon-close-cross.svg") no-repeat 50% 50%;
+    background-size: 100%;
     opacity: 0.3;
 }
 
@@ -770,7 +796,7 @@ a.button-write-us {
     margin-bottom: 13px;
     padding: 0 30px;
     background: #eeeeee;
-    border-radius: 5px;
+    border-radius: 3px;
     overflow: hidden;
 }
 
@@ -840,7 +866,8 @@ a.button-write-us {
     font-size: 55px;
     line-height: 55px;
     padding: 40px 0px 108px 0;
-    text-align: center;    
+    text-align: center;         
+    color: black;
 }
 
 .main-page-catalog {
@@ -939,6 +966,7 @@ input.grid-input + label:hover {
 }
 
 .features label {
+    color: #283136;
     font-size: 16px;
     line-height: 20px;
     background: url("../img/icon-checkbox-off.svg") left 50% no-repeat;

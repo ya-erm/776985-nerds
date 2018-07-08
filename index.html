@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>Дизайн-студия «Nerds»</title>
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> -->
-  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -68,7 +68,7 @@
 		
 		<main class="main-page">
 			<div class="container">
-				<section class="offers">
+				<section class="offers underlined">
 					<h2 class="visually-hidden">Наши услуги:</h2>
 					<ul class="offer-list">
 						<li>
@@ -91,40 +91,42 @@
 						</li>
 					</ul>
 				</section>
-				<hr>
-				<section class="about-us">
+
+				<section class="underlined">
 					<h2 class="visually-hidden">О нас:</h2>
-					<div class="about-us-left-block">
-						<p class="about-us-slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-						<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-						<p class="services-header">Выполняем заказы на разработку:</p>
-						<ul class="services-list">
-							<li>Веб-сайтов любой сложности</li>
-							<li>Мобильных приложений для iOS и Android</li>
-							<li>Слайдшоу и видео для корпоративных презентаций</li>
-						</ul>
-					</div>
-					<div class="about-us-right-block">
-						<img src="img/illustration-logo-nerds.png" width="360" height="210" alt="Логотип дизайн-студии «Nerds»">
-						<p class="statistic-slogan">C 2004 года любим точность во всем:</p>
-						<ul class="statistic">
-							<li>
-								<p class="percentages">146<sup>%</sup></p>
-								<p>Уровень самоотдачи</p>
-							</li>
-							<li>
-								<p class="percentages">100<sup>%</sup></p>
-								<p>Соблюдение сроков</p>
-							</li>
-							<li>
-								<p class="percentages">50<sup>%</sup></p>
-								<p>Минимальная предоплата</p>
-							</li>
-						</ul>
+					<div class="about-us">
+						<div class="about-us-left-block">
+							<p class="about-us-slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+							<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+							<p class="services-header">Выполняем заказы на разработку:</p>
+							<ul class="services-list">
+								<li>Веб-сайтов любой сложности</li>
+								<li>Мобильных приложений для iOS и Android</li>
+								<li>Слайдшоу и видео для корпоративных презентаций</li>
+							</ul>
+						</div>
+						<div class="about-us-right-block">
+							<img src="img/illustration-logo-nerds.png" width="360" height="210" alt="Логотип дизайн-студии «Nerds»">
+							<p class="statistic-slogan">C 2004 года любим точность во всем:</p>
+							<ul class="statistic">
+								<li>
+									<p class="percentages">146<sup>%</sup></p>
+									<p>Уровень самоотдачи</p>
+								</li>
+								<li>
+									<p class="percentages">100<sup>%</sup></p>
+									<p>Соблюдение сроков</p>
+								</li>
+								<li>
+									<p class="percentages">50<sup>%</sup></p>
+									<p>Минимальная предоплата</p>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</section>
-				<hr>
-				<section class="partners">
+
+				<section class="partners underlined">
 					<h2 class="visually-hidden">Наши партнеры:</h2>
 					<ul class="partners-list">
 						<li class="partners-item">
@@ -141,7 +143,6 @@
 						</li>
 					</ul>
 				</section>
-				<hr>
 			</div>
 		</main>
 		
@@ -165,16 +166,19 @@
 				<ul class="social-list">
 					<li>
 						<a class="social-item" href="#" title="Вконтакте">
+							<span class="visually-hidden">Мы Вконтакте</span>
 							<img src="img/icon-social-vk.svg" width="25" height="25" alt="Вконтакте">
 						</a>
 					</li>
 					<li>
 						<a class="social-item" href="#" title="Facebook">
+							<span class="visually-hidden">Мы в Facebookе</span>
 							<img src="img/icon-social-fb.svg" width="25" height="25" alt="Facebook">
 						</a>
 					</li>
 					<li>
 						<a class="social-item" href="#" title="Instagram">
+							<span class="visually-hidden">Мы в Instagramе</span>
 							<img src="img/icon-social-insta.svg" width="25" height="25" alt="Instagram">
 						</a>
 					</li>
@@ -190,7 +194,7 @@
 			<section class="modal modal-write-us container">
 				<h2>Напишите нам</h2>
 				<a href="#modal-write-us" id="button-close" class="button-close" title="Закрыть">
-					<img src="img/icon-close-cross.svg" width="25" height="25" alt="Закрыть">
+					<span class="visually-hidden">Закрыть</span>
 				</a>
 				<form action="https://echo.htmlacademy.ru" method="post">
 					<div class="form-element">
@@ -210,6 +214,6 @@
 			</section>
 		</div>
 
-		<script src="./js/script.min.js"></script>
+		<script src="js/script.min.js"></script>
 	</body> 
 </html>
