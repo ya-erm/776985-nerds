@@ -480,7 +480,7 @@ a.main-header-logo:active {
 }
 
 .partners-item a:active {
-    opacity: 1.0; 
+    opacity: 0.1; 
 }
 
 .main-footer {
