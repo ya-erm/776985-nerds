@@ -390,13 +390,6 @@ a.main-header-logo:active {
     min-height: 510px;
 }
 
-.about-us-left-block p.about-us-slogan {
-    margin: 65px 10px 0;
-    font-weight: 500; 
-    font-size: 45px;
-    line-height: 45px;
-}
-
 .about-us-left-block {
     width: 780px;
 }
@@ -409,6 +402,9 @@ a.main-header-logo:active {
 
 .about-us-left-block > .about-us-slogan { 
     margin: 65px 10px 0;   
+    font-weight: 500; 
+    font-size: 45px;
+    line-height: 45px;
     color: black;
 }
 
@@ -458,7 +454,7 @@ a.main-header-logo:active {
     margin: 20px 10px 0 10px;
 }
 
-.statistic p.percentages {
+.statistic .percentages {
     color: black;
     margin: 0 11px; 
     font-size: 45px;
@@ -1080,6 +1076,7 @@ button.filter-button {
 .order-buttons {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-left: 37px;
     margin-right: 0;
     width: 40px;
@@ -1090,7 +1087,7 @@ button.filter-button {
     display: block;
     width: 11px;
     height: 10px;
-    margin: 5px 0 0 0;
+    margin: 0;
 }
 
 .order-buttons a:hover {
@@ -1102,11 +1099,11 @@ button.filter-button {
     opacity: 1;
 }
 
-.order-buttons p:first-of-type a {
+.order-buttons a:first-of-type {
     background: url("../img/icon-cursor-down-dir.svg") no-repeat;
 }
 
-.order-buttons p:last-of-type a {
+.order-buttons a:last-of-type {
     background: url("../img/icon-cursor-up-dir.svg") no-repeat;
 }
 
