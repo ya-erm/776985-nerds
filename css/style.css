@@ -933,8 +933,15 @@ a.button-write-us {
     outline: auto;
 }
 
-input.grid-input + label:hover {
+input.grid-input + label:hover,
+input.features-input + label:hover {
     opacity: 1;
+}
+
+input.grid-input:disabled + label,
+input.features-input:disabled + label {
+    cursor: not-allowed;
+    opacity: 0.3;
 }
 
 .filtration label:not(.price-label-range) {
@@ -982,10 +989,6 @@ input.grid-input + label:hover {
 
 .features-input:focus + label {
     outline: auto;
-}
-
-.features-input + label:hover {
-    opacity: 1;
 }
 
 .filtration legend {
