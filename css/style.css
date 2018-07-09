@@ -268,14 +268,22 @@ a.main-header-logo:active {
     left: 611px;
 }
 
-.button-slide:hover,
-.button-slide:active,
-.button-slide:checked + label:hover::before  {
-    background: white;
+.button-slide:active {
     box-shadow: none;
 }
 
 .button-slide::before {
+    content: "";
+    position: absolute;
+    background: white;
+    top: 0px;
+    left: 0px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+.button-slide::after {
     content: "";
     position: absolute;
     top: 5px;
@@ -285,17 +293,20 @@ a.main-header-logo:active {
     border-radius: 50%;
 }
 
-.button-slide:checked + label::before {
+.button-slide:checked::after, 
+.button-slide:checked:hover::after  {
     border: 2px solid #c1c1c1;
+    background-color: white;
 }
 
-.button-slide:hover::before {
+.button-slide:hover::after {
+    border: 2px solid #c1c1c1;
     background-color: #c1c1c1;
-    border: 2px solid #c1c1c1;
+    opacity: 0.75;
 }
 
-.button-slide:active::before {
-   opacity: 0.75;
+.button-slide:active::after {
+   opacity: 0.50;
 }
 
 .button-slide:checked ~ .slide-content {
