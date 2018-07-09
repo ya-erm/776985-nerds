@@ -1013,10 +1013,6 @@ button.filter-button {
     height: 50px;
 }
 
-button.filter-button:focus {
-    outline: 0;
-}
-
 .view-product {
     width: 760px;
     margin-right: 10px;
