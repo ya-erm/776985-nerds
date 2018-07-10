@@ -111,9 +111,8 @@ a.button-write-us{margin-top:36px;width:220px;height:50px;color:#fff}
 .social-right-block{padding-left:30px}
 .social-slogan{margin:0;padding:6px 0 0;font-size:36px;font-weight:700;line-height:36px;color:#000}
 .social-description{color:#444;margin:12px 0 0;padding:0}
-.modal-container.closed{display:none}
-.modal-container{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;background:rgba(0,0,0,0.7);transform:scale()}
-.modal{display:flex;position:absolute;margin:0 auto;flex-wrap:wrap;align-items:baseline;justify-content:space-between;background-color:#fff;padding:48px 80px;margin:200px auto;right:0;left:0;z-index:1010}
+.modal-container{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;background:rgba(0,0,0,0.7)}
+.modal{display:flex;display:none;position:absolute;margin:0 auto;flex-wrap:wrap;align-items:baseline;justify-content:space-between;background-color:#fff;padding:48px 80px;margin:200px auto;right:0;left:0;z-index:1010}
 .modal-write-us{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:960px;box-shadow:0 15px 40px 0 rgba(0,1,1,0.75)}
 .modal-write-us h2{margin:20px;font-size:45px;line-height:45px;color:#000}
 .modal-write-us > form{display:flex;flex-wrap:wrap;width:100%}
@@ -125,6 +124,22 @@ a.button-write-us{margin-top:36px;width:220px;height:50px;color:#fff}
 .modal-write-us input:hover::placeholder,.modal-write-us textarea:hover::placeholder{color:rgba(68,68,68,0.5)}
 .modal-write-us input:focus::placeholder,.modal-write-us textarea:focus::placeholder{color:rgba(68,68,68,1)}
 .modal-write-us .validator:invalid::placeholder{color:#e74246}
+@keyframes opacity-in {
+0%{opacity:0;display:none}
+100%{opacity:1;display:unset}
+}
+@keyframes fade-in {
+0%{margin-top:100%;display:none}
+100%{margin-top:200px;display:unset}
+}
+@keyframes shake {
+0%,100%{transform:translateX(0)}
+10%,30%,50%,70%,90%{transform:translateX(-10px)}
+20%,40%,60%,80%{transform:translateX(10px)}
+}
+.modal-container-opacity{display:block;animation:opacity-in .75s}
+.modal-show{display:flex;animation:fade-in .75s}
+.modal-error{animation:shake .6s}
 .form-element{margin:20px;width:360px}
 .form-element-text{margin:20px}
 .form-element > label{color:#000;display:block;font-weight:700;line-height:18px;margin-bottom:10px}
