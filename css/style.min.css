@@ -32,14 +32,16 @@ a.main-header-logo:active{opacity:.3}
 .cart-item{display:flex;align-items:center;background:url(../img/icon-cart.svg) left no-repeat;padding-left:40px;margin-bottom:15px;margin-right:10px}
 .cart{width:200px;padding-top:80px;text-align:left}
 .cart > img{margin-left:55px;margin-right:20px;opacity:.7}
-.slider{position:relative;list-style:none;height:430px;padding:0;margin:0}
-.slider > .slide{position:absolute}
-.slide-content{display:none}
-.slider-navigation{position:absolute;left:0;right:0;bottom:10px;width:75px;margin:0 auto;padding:0;display:flex;justify-content:center;list-style:none}
+.slider{position:relative;list-style:none;height:430px;padding:0;margin:0;margin-right:13px}
+.slide{position:absolute;height:100%;width:100%}
+.slide-content{width:100%;height:100%;display:none;background-position-x:right;background-position-y:bottom;background-repeat:no-repeat}
+.slide:nth-child(1) .slide-content{background-image:url(../img/slide-phone.png)}
+.slide:nth-child(2) .slide-content{background-image:url(../img/slide-desktop.png)}
+.slide:nth-child(3) .slide-content{background-image:url(../img/slide-tablet-and-phone.png)}
 .button-slide{width:18px;height:18px;background:#fff;border-radius:50%;margin:5px;position:absolute;z-index:10;top:311px}
-.slide-first .button-slide{left:541px}
-.slide-second .button-slide{left:576px}
-.slide-third .button-slide{left:611px}
+.slide:nth-child(1) .button-slide{left:541px}
+.slide:nth-child(2) .button-slide{left:576px}
+.slide:nth-child(3) .button-slide{left:611px}
 .button-slide:active{box-shadow:none}
 .button-slide::before{content:"";position:absolute;background:#fff;top:0;left:0;width:18px;height:18px;border-radius:50%}
 .button-slide::after{content:"";position:absolute;top:5px;left:5px;width:4px;height:4px;border-radius:50%}
@@ -53,8 +55,11 @@ a.main-header-logo:active{opacity:.3}
 .feature > p{margin:27px 10px 0;font-size:16px;line-height:24px;max-width:420px}
 .button-more{width:240px;height:50px;margin:38px 10px 0}
 .offer-list{margin:0;padding:0 10px;min-height:500px;list-style:none;display:flex;justify-content:space-between;padding-right:70px}
-.offer-list li{margin:80px 0 0;width:300px}
-.offer-list h3{margin:0;margin-top:24px;font-size:24px;line-height:24px;font-weight:700;color:#000;text-transform:uppercase}
+.offer-list li{width:300px;margin:80px 0 0;padding-top:146px;background-position-y:top;background-repeat:no-repeat}
+.offer-list li:nth-child(1){background-image:url(../img/illustration-web.png)}
+.offer-list li:nth-child(2){background-image:url(../img/illustration-mobile.png)}
+.offer-list li:nth-child(3){background-image:url(../img/illustration-presentation.png)}
+.offer-list h3{margin:0;margin-top:28px;font-size:24px;line-height:24px;font-weight:700;color:#000;text-transform:uppercase}
 .offer-list p{margin:0;margin-top:20px;line-height:24px;padding-right:30px}
 .offer-list a{display:flex;margin:0;margin-top:31px;height:50px;width:160px}
 .about-us{display:flex;min-height:510px}
@@ -92,11 +97,14 @@ a.button-write-us{margin-top:36px;width:220px;height:50px;color:#fff}
 .social{padding-top:65px;display:flex}
 .social-list{margin:0;padding:0;width:380px;display:flex;list-style:none}
 .social-list > li{margin-left:10px;line-height:0}
-.social-item{width:80px;height:80px;display:flex;border-radius:50%;background-color:#e1e1e1;background-position:50% 50%;background-repeat:no-repeat}
+.social-item{width:80px;height:80px;display:flex;border-radius:50%;background-color:#e1e1e1;position:relative}
 .social-item:hover{background-color:#e74246}
 .social-item:active{background-color:#d7373b;box-shadow:inset 0 3px 0 0 #c13135}
-.social-item img{margin:auto}
-.social-item:active img{opacity:.3}
+.social-item::after{content:"";width:100%;height:100%;position:absolute;background-position:50% 50%;background-repeat:no-repeat}
+.social-item:active::after{opacity:.2}
+.social-item-vk::after{background-image:url(../img/icon-social-vk.svg)}
+.social-item-fb::after{background-image:url(../img/icon-social-fb.svg)}
+.social-item-insta::after{background-image:url(../img/icon-social-insta.svg)}
 .social-right-block{padding-left:30px}
 .social-slogan{margin:0;padding:6px 0 0;font-size:36px;font-weight:700;line-height:36px;color:#000}
 .social-description{color:#444;margin:12px 0 0;padding:0}
