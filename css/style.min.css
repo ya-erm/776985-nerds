@@ -84,7 +84,7 @@ a.main-header-logo:active{opacity:.3}
 .main-footer-index{margin-top:66px}
 .map{background-color:#e9e5dc;height:416px;width:100%}
 .map-img{position:absolute;margin:0 auto;right:0;left:0}
-.map iframe{position:absolute;width:100%;right:0;left:0}
+.map iframe{position:absolute;width:100%;border:0;right:0;left:0}
 .place-card{visibility:hidden}
 .map .container{position:relative}
 .map-marker{position:absolute;left:575px;top:85px}
