@@ -29,8 +29,8 @@
 				<section class="filtration">
 					<h2 class="visually-hidden">Фильтр товаров</h2>
 					<form action="https://echo.htmlacademy.ru" method="post">
-						<div class="cost">
-							<span>Стоимость:</span>
+						<fieldset class="cost">
+							<legend>Стоимость:</legend>
 							<div class="range-filter">
 								<div class="range-controls">
 									<div class="scale">
@@ -40,33 +40,31 @@
 									<div class="toggle max-toggle"></div>
 								</div>
 								<div class="price-controls">
-									<label class="price-label-range">от
-										<input name="min-price" class="min-price" type="text" value="0"> 
-									</label>	
-									<label class="price-label-range">до
-										<input name="max-price" class="max-price" type="text" value="15 000">
-									</label>
+									<label for="min-price" class="price-label-range price-label-min">от</label>
+									<input name="min-price" class="min-price" type="text" value="0"> 
+									<label for="max-price" class="price-label-range price-label-max">до</label>
+									<input name="max-price" class="max-price" type="text" value="15 000">
 								</div>
 							</div>
-						</div>
+						</fieldset>
 						<fieldset class="grid">
 							<legend>Сетка:</legend>
 							<ul>
 								<li>
 									<input class="visually-hidden grid-input" type="radio" name="grid-type" value="adaptive" id="filter-grid-adaptive" checked>
-									<label for="filter-grid-adaptive">
+									<label for="filter-grid-adaptive" class="grid-label">
 										Адаптивная
 									</label>
 								</li>
 								<li>
 									<input class="visually-hidden grid-input" type="radio" name="grid-type" value="fixed" id="filter-grid-fixed">
-									<label for="filter-grid-fixed">
+									<label for="filter-grid-fixed" class="grid-label">
 										Фиксированная
 									</label>
 								</li>
 								<li>
 									<input class="visually-hidden grid-input" type="radio" name="grid-type" value="flexed" id="filter-grid-flexed">
-									<label for="filter-grid-flexed">
+									<label for="filter-grid-flexed" class="grid-label">
 										Резиновая
 									</label>
 								</li>
@@ -77,31 +75,31 @@
 							<ul>
 								<li>
 									<input class="visually-hidden features-input" type="checkbox" name="slider" id="filter-features-slider" checked>
-									<label for="filter-features-slider">
+									<label for="filter-features-slider" class="features-label">
 										Слайдер
 									</label>
 								</li>
 								<li>
 									<input class="visually-hidden features-input" type="checkbox" name="advantages" id="filter-features-advantages">
-									<label for="filter-features-advantages">
+									<label for="filter-features-advantages" class="features-label">
 										Блок преимуществ
 									</label>
 								</li>
 								<li>
 									<input class="visually-hidden features-input" type="checkbox" name="news" id="filter-features-news" checked>
-									<label for="filter-features-news">
+									<label for="filter-features-news" class="features-label">
 										Новости
 									</label>
 								</li>
 								<li>
 									<input class="visually-hidden features-input" type="checkbox" name="gallery" id="filter-features-gallery">
-									<label for="filter-features-gallery">
+									<label for="filter-features-gallery" class="features-label">
 										Галерея
 									</label>
 								</li>
 								<li>
 									<input class="visually-hidden features-input" type="checkbox" name="cart" id="filter-features-cart">
-									<label for="filter-features-cart">
+									<label for="filter-features-cart" class="features-label">
 										Корзина
 									</label>
 								</li>
@@ -117,15 +115,9 @@
 						<p>Сортировать:</p>
 						<div class="sort-buttons">
 							<ul class="sort-button-list">
-								<li>
-									<a href="#" class="active">По цене</a>
-								</li>
-								<li>
-									<a href="#">По типу</a>
-								</li>
-								<li>
-									<a href="#">По названию</a>
-								</li>
+								<li><a href="#" class="active">По цене</a></li>
+								<li><a href="#">По типу</a></li>
+								<li><a href="#">По названию</a></li>
 							</ul>
 							<div class="order-buttons">
 								<a href="#" class="active" title="По убыванию">
@@ -142,76 +134,50 @@
 						<ul class="template-list">
 							<li class="template-item">
 								<img src="img/img-sedona.jpg" width="360" height="576" alt="Вид проекта Sedona">
-								
-								<div class="wrapper-template">
-									<div class="description-window">
-										<a href="#sedona">
-											<h3>Sedona</h3>
-										</a>
-										<p>Информационный сайт для&nbsp;туристов</p>
-										<a class="button button-price" href="#">9 900 руб.</a>
-									</div>
+								<div class="description-window">
+									<a href="#sedona"><h3>Sedona</h3></a>
+									<p>Информационный сайт для&nbsp;туристов</p>
+									<a class="button button-price" href="#">9 900 руб.</a>
 								</div>
 							</li>
 							<li class="template-item">
 								<img src="img/img-pink.jpg" width="360" height="576" alt="Вид проекта Pink">
-								
-								<div class="wrapper-template">
-									<div class="description-window">
-										<a href="#pink">
-											<h3>Pink App</h3>
-										</a>
-										<p>Продуктовый лендинг приложения&nbsp;для&nbsp;iOS&nbsp;и&nbsp;Android</p>
-										<a class="button button-price" href="#">9 900 руб.</a>
-									</div>
+								<div class="description-window">
+									<a href="#pink"><h3>Pink App</h3></a>
+									<p>Продуктовый лендинг приложения&nbsp;для&nbsp;iOS&nbsp;и&nbsp;Android</p>
+									<a class="button button-price" href="#">9 900 руб.</a>
 								</div>
 							</li>
 							<li class="template-item">
 								<img src="img/img-barbershop.jpg" width="360" height="576" alt="Вид проекта Borodinski">
-								<div class="wrapper-template">
-									<div class="description-window">
-										<a href="#barbershop">
-											<h3>Barbershop</h3>
-										</a>
-										<p>Сайт салоны красоты. Для&nbsp;мужчин,&nbsp;да.</p>
-										<a class="button button-price" href="#">9 900 руб.</a>
-									</div>
+								<div class="description-window">
+									<a href="#barbershop"><h3>Barbershop</h3></a>
+									<p>Сайт салоны красоты. Для&nbsp;мужчин,&nbsp;да.</p>
+									<a class="button button-price" href="#">9 900 руб.</a>
 								</div>
 							</li>
 							<li class="template-item">
 								<img src="img/img-mishka.jpg" width="360" height="576" alt="Вид проекта Mishka">
-								<div class="wrapper-template">
-									<div class="description-window">
-										<a href="#miska">
-											<h3>Mishka</h3>
-										</a>
-										<p>Интернет-магазин вязаных&nbsp;игрушек</p>
-										<a class="button button-price" href="#">9 900 руб.</a>
-									</div>
+								<div class="description-window">
+									<a href="#miska"><h3>Mishka</h3></a>
+									<p>Интернет-магазин вязаных&nbsp;игрушек</p>
+									<a class="button button-price" href="#">9 900 руб.</a>
 								</div>
 							</li>
 							<li class="template-item">
 								<img src="img/img-aplus.jpg" width="360" height="576" alt="Вид проекта A Plus">
-								<div class="wrapper-template">
-									<div class="description-window">
-										<a href="#aplus">
-											<h3>A Plus</h3>
-										</a>
-										<p>Лендинг курсов повышения квалификации</p>
-										<a class="button button-price" href="#">9 900 руб.</a>
-									</div>
+								<div class="description-window">
+									<a href="#aplus"><h3>A Plus</h3></a>
+									<p>Лендинг курсов повышения квалификации</p>
+									<a class="button button-price" href="#">9 900 руб.</a>
 								</div>
 							</li>
 							<li class="template-item">
 								<img src="img/img-kvast.jpg" width="360" height="576" alt="Вид проекта Kvast">
-								<div class="wrapper-template">
-									<div class="description-window">
-										<a href="#kvast">
-											<h3>Кваст</h3>
-										</a>
-										<p>Промо-сайт производителя крафтового кваса</p>
-										<a class="button button-price" href="#">9 900 руб.</a>
-									</div>
+								<div class="description-window">
+									<a href="#kvast"><h3>Кваст</h3></a>
+									<p>Промо-сайт производителя крафтового кваса</p>
+									<a class="button button-price" href="#">9 900 руб.</a>
 								</div>
 							</li>
 						</ul>
