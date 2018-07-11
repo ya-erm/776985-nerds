@@ -88,10 +88,9 @@
 body {   
     margin: 0;
     padding: 0; 
-    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     color: #283136;
-    min-width: 1200px;
+    font-family: "Roboto", Arial, sans-serif;
 }
 
 a {
@@ -153,9 +152,9 @@ a.main-header-logo:active {
     width: 800px;
     display: flex;    
     margin-bottom: 15px; 
-    display: flex;
     margin-left: 186px;
     list-style: none;    
+    flex-wrap: wrap;
 }
 
 .site-navigation li {
@@ -256,9 +255,10 @@ a.main-header-logo:active {
     height: 18px;
     background: white;
     border-radius: 50%;
-    margin: 5px;
     position: absolute;
+    cursor: pointer;
     z-index: 10;
+    margin: 5px;
     top: 311px;
 }
 
@@ -274,11 +274,11 @@ a.main-header-logo:active {
     left: 611px;
 }
 
-.button-slide:active {
+.button-slide:active + label {
     box-shadow: none;
 }
 
-.button-slide::before {
+label.button-slide::before {
     content: "";
     position: absolute;
     background: white;
@@ -289,7 +289,7 @@ a.main-header-logo:active {
     border-radius: 50%;
 }
 
-.button-slide::after {
+label.button-slide::after {
     content: "";
     position: absolute;
     top: 5px;
@@ -299,19 +299,19 @@ a.main-header-logo:active {
     border-radius: 50%;
 }
 
-.button-slide:checked::after, 
-.button-slide:checked:hover::after  {
+.button-slide:checked + label::after, 
+.button-slide:checked:hover + label::after  {
     border: 2px solid #c1c1c1;
     background-color: white;
 }
 
-.button-slide:hover::after {
+.button-slide:hover + label::after {
     border: 2px solid #c1c1c1;
     background-color: #c1c1c1;
     opacity: 0.75;
 }
 
-.button-slide:active::after {
+.button-slide:active + label::after {
    opacity: 0.50;
 }
 
@@ -523,6 +523,9 @@ a.main-header-logo:active {
 
 .map { 
     background-color: #e9e5dc;
+    background-image: url("../img/map.png");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
     height: 416px;
     width: 100%;
 }
@@ -535,6 +538,7 @@ a.main-header-logo:active {
 }
 
 .map iframe {
+    z-index: 1;
     position: absolute;
     width: 100%;
     border: 0;
@@ -562,6 +566,7 @@ a.main-header-logo:active {
 }
 
 .address-wrapper {
+    z-index: 2;
     width: 319px;
     position: absolute;
     background: #ffffff;
@@ -693,30 +698,22 @@ a.button-write-us {
 }
 
 .modal-container {
-    display: none;
-    position: fixed;
     top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    left: 0;
     z-index: 1000; 
+    display: none;
+    position: fixed;
+    align-items: center;
     background: rgba(0,0,0,0.7);
 }
 
 .modal {
-    display: flex;
     display: none;
-    position: absolute;
-    margin: 0 auto;
     flex-wrap: wrap;
-    align-items: baseline;
     justify-content: space-between;
     background-color: #ffffff;
-    padding: 48px 80px;
-    margin: 200px auto;
-    right: 0;
-    left: 0;
-    
     z-index: 1010; 
 }
 
@@ -724,12 +721,24 @@ a.button-write-us {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    padding: 0;
     width: 960px;
+    max-width: 100%;
+    overflow-x: auto;
+    padding-top: 48px;
     box-shadow: 0 15px 40px 0px rgba(0, 1, 1, 0.75);
+    /*background: url("../preview/modal-write-us.png");*/
+}
+
+.modal-write-us-header {    
+    min-width: 960px;
+    display: flex;
+    justify-content: space-between;
 }
  
 .modal-write-us h2 {
-    margin: 20px;
+    padding: 0 18px;
+    margin: 20px 80px;
     font-size: 45px;
     line-height: 45px;
     color: black;   
@@ -738,7 +747,8 @@ a.button-write-us {
 .modal-write-us > form {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 960px;
+    padding: 0 80px;
 }
 
 .modal-write-us input,
@@ -748,7 +758,6 @@ a.button-write-us {
     box-sizing: border-box;
     border: 2px solid #d7dcde;
     border-radius: 2px;
-    
 }
 
 .modal-write-us input:hover,
@@ -787,13 +796,13 @@ a.button-write-us {
 }
 
 @keyframes opacity-in {
-    0% { opacity: 0; display: none; }
-    100% { opacity: 1; display: unset; }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @keyframes fade-in {
-    0% { margin-top: 100%; display: none; }
-    100% { margin-top: 200px; display: unset; }
+    0% { margin-top: 100%; }
+    100% { margin-top: 0; }
 }
 
 @keyframes shake {
@@ -803,7 +812,7 @@ a.button-write-us {
 }
 
 .modal-container-opacity {
-    display: block;
+    display: flex;
     animation: opacity-in 0.75s;
 }
 
@@ -835,34 +844,33 @@ a.button-write-us {
 
 .form-element > input {
     padding: 0 10px;
-    width: 360px;
+    width: 100%;
     height: 50px;
 } 
 
 .form-element-text {
-    margin: 8px 20px 0 20px;
+    margin: 12px 20px 0 20px;
     width: 100%;
 }
 
 .form-element > textarea {
     width: 760px;
-    height: 115px;
+    height: 118px;
     padding: 10px;
     resize: none;
 }
 
 .button-send {
-    margin: 24px 20px 0 20px;
+    margin: 43px 20px 36px 20px;
     width: 260px;
     height: 50px;
 }
 .button-close {
-    margin: 0;
-    padding: 5px;
+    margin: 30px 90px;
     border-color: transparent; 
     background-color: transparent;
-    width: 25px;
-    height: 25px;
+    width: 21px;
+    height: 21px;
     background: url("../img/icon-close-cross.svg") no-repeat 50% 50%;
     background-size: 100%;
     opacity: 0.3;
@@ -1248,29 +1256,31 @@ button.filter-button {
 
 .description-window {
     opacity: 0;    
+    width: 100%;
+    min-height: 230px;
     text-align: center;
-    padding: 10px 65px 43px 65px;
     background-color: #eeeeee;
     position: absolute;
+    z-index: 1;
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 1;
 }
 
 .description-window h3 {
-    text-transform: uppercase;
+    margin: 26px;
     color: black;
     font-size: 18px;
     line-height: 30px;
-    margin-bottom: 5px; 
-    margin-right: 2px;
+    margin-bottom: 13px; 
+    text-transform: uppercase;
 }
 
 .description-window p {
+    width: 240px;
     font-size: 16px;
     line-height: 18px;
-    margin-top: 15px;
+    margin: 15px auto;
 }
 
 .button-price {
@@ -1279,9 +1289,7 @@ button.filter-button {
 }
 
 .description-window .button-price {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto 43px;
 }
 
 .button.button-price:active {

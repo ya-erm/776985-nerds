@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Дизайн-студия «Nerds»</title>
-  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> -->
   <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +27,8 @@
 		<section class="container">
 			<ul class="slider">
 				<li class="slide">
-					<input type="radio" name="slide" id="slide-1" class="button button-slide" title="Первый слайд" checked>
+					<input type="radio" name="slide" id="slide-1" class="button-slide" checked>
+					<label for="slide-1" class="button-slide" title="Первый слайд"></label>
 					<div class="slide-content">
 						<div class="feature">
 							<h2>Долго, дорого, <br>скрупулезно.</h2>
@@ -37,7 +38,8 @@
 					</div>
 				</li>
 				<li class="slide">
-					<input type="radio" name="slide" id="slide-2" class="button button-slide" title="Второй слайд">
+					<input type="radio" name="slide" id="slide-2" class="button-slide">
+					<label for="slide-2" class="button-slide" title="Второй слайд"></label>
 					<div class="slide-content">
 						<div class="feature">
 							<h2>Любим математику как никто другой</h2>
@@ -47,7 +49,8 @@
 					</div>
 				</li>
 				<li class="slide">
-					<input type="radio" name="slide" id="slide-4" class="button button-slide"  title="Третий слайд">
+					<input type="radio" name="slide" id="slide-3" class="button-slide">
+					<label for="slide-3" class="button-slide" title="Третий слайд"></label>
 					<div class="slide-content">
 						<div class="feature">
 							<h2>Только ночь, <br>только хардкор</h2>
@@ -148,14 +151,12 @@
 		<footer class="main-footer main-footer-index">
 			<section class="map">
 				<h2 class="visually-hidden">Контакты:</h2>
-				<img class="map-img" src="img/map.png" width="1440" height="416" alt="Карта">
 				<iframe height="416" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.320894616398647!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1531241585485"></iframe>
 				<div class="contacts container">
 					<div class="address-wrapper">
 						<div class="address">
 							<h3 class="address-header uppercase">Nёrds Design Studio</h3>
-							<p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-							</p>
+							<p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 							<p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
 							<a href="#modal-write-us" id="button-open" class="button button-write-us">Напишите нам</a>
 						</div>
@@ -190,10 +191,12 @@
 		
 		<div id="modal-container" class="modal-container">
 			<section id="modal-write-us" class="modal modal-write-us container">
-				<h2>Напишите нам</h2>
-				<a href="#modal-write-us" id="button-close" class="button-close" title="Закрыть">
-					<span class="visually-hidden">Закрыть</span>
-				</a>
+				<div class="modal-write-us-header">
+					<h2>Напишите нам</h2>
+					<a href="#modal-write-us" id="button-close" class="button-close" title="Закрыть">
+						<span class="visually-hidden">Закрыть</span>
+					</a>
+				</div>
 				<form action="https://echo.htmlacademy.ru" method="post">
 					<div class="form-element">
 						<label for="user-name">Ваше имя:</label>
